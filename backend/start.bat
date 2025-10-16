@@ -7,11 +7,17 @@ echo ================================================================
 echo.
 
 echo [1/4] Verificando Python...
-python --version
+python --version 2>nul
 if errorlevel 1 (
-    echo ERROR: Python no esta instalado o no esta en PATH
-    pause
-    exit /b 1
+    python3 --version 2>nul
+    if errorlevel 1 (
+        echo ERROR: Python no esta instalado o no esta en PATH
+        pause
+        exit /b 1
+    )
+    set PYTHON_CMD=python3
+) else (
+    set PYTHON_CMD=python
 )
 
 echo.
@@ -27,10 +33,10 @@ if exist ".env" (
 
 echo.
 echo [3/4] Verificando configuracion Oracle...
-python -c "from app.core.config import settings; print('ORACLE_DB_USER:', settings.ORACLE_DB_USER or 'NO CONFIGURADO'); print('ORACLE_DB_SERVICE_NAME:', settings.ORACLE_DB_SERVICE_NAME or 'NO CONFIGURADO')"
+%PYTHON_CMD% -c "from app.core.config import settings; print('ORACLE_DB_USER:', settings.ORACLE_DB_USER or 'NO CONFIGURADO'); print('ORACLE_DB_SERVICE_NAME:', settings.ORACLE_DB_SERVICE_NAME or 'NO CONFIGURADO')"
 
 echo.
 echo [4/4] Iniciando servidor...
 echo.
-python run_dev.py
+%PYTHON_CMD% run_dev.py
 

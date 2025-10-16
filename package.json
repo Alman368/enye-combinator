@@ -5,11 +5,11 @@
   "scripts": {
     "start": "concurrently \"npm run backend\" \"npm run frontend\" --names \"BACKEND,FRONTEND\" --prefix-colors \"bgBlue.bold,bgGreen.bold\"",
     "frontend": "cd frontend && npm run dev",
-    "backend": "node -e \"require('child_process').spawn(process.platform === 'win32' ? 'backend/start.bat' : './backend/start.sh', {shell: true, stdio: 'inherit'})\"",
-    "backend:init": "cd backend && python3 init_db.py",
+    "backend": "cross-env-shell \"cd backend && (python run_dev.py || python3 run_dev.py)\"",
+    "backend:init": "cd backend && (python init_db.py || python3 init_db.py)",
     "install": "npm run install:frontend && npm run install:backend",
     "install:frontend": "cd frontend && npm install",
-    "install:backend": "cd backend && pip install -r requirements.txt",
+    "install:backend": "cd backend && (pip install -r requirements.txt || pip3 install -r requirements.txt)",
     "dev": "npm start"
   },
   "keywords": [
@@ -23,6 +23,7 @@
   "author": "MindHealth Analytics Team",
   "license": "MIT",
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "cross-env": "^10.1.0"
   }
 }
