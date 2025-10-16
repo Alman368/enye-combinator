@@ -22,6 +22,13 @@ class Settings(BaseSettings):
     # Database
     DATABASE_URL: str
     
+    # Oracle Database
+    ORACLE_DB_USER: str = ""
+    ORACLE_DB_PASSWORD: str = ""
+    ORACLE_DB_HOST: str = ""
+    ORACLE_DB_PORT: int = 1522
+    ORACLE_DB_SERVICE_NAME: str = ""
+    
     # CORS
     BACKEND_CORS_ORIGINS: List[str] = [
         "http://localhost:3000",
