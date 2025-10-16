@@ -6,17 +6,18 @@ echo DIAGNOSTICO DE CONFIGURACION - WINDOWS
 echo ================================================================
 echo.
 
-REM Activar venv
+REM Intentar activar venv si existe
 if exist "..\venv\Scripts\activate.bat" (
     call ..\venv\Scripts\activate.bat
-    echo [OK] Entorno virtual activado
+    echo [OK] Usando entorno virtual
 ) else (
-    echo [ERROR] No se encuentra el entorno virtual en ..\venv
-    echo.
-    echo Solucion: Ejecuta en la raiz del proyecto:
-    echo   python -m venv venv
-    echo   venv\Scripts\activate
-    echo   pip install -r backend\requirements.txt
+    echo [INFO] No hay venv, usando Python del sistema
+)
+
+REM Verificar Python
+python --version >nul 2>&1
+if errorlevel 1 (
+    echo [ERROR] Python no esta instalado o no esta en PATH
     pause
     exit /b 1
 )

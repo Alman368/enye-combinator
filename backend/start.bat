@@ -1,13 +1,20 @@
 @echo off
 cd /d "%~dp0"
 
-echo Activando entorno virtual...
+echo Verificando Python...
+
+REM Intentar usar venv si existe
 if exist "..\venv\Scripts\activate.bat" (
+    echo Usando entorno virtual...
     call ..\venv\Scripts\activate.bat
-    echo Entorno virtual activado
 ) else (
-    echo ERROR: No se encuentra el entorno virtual
-    echo Ejecuta: python -m venv venv
+    echo No se encontro venv, usando Python del sistema...
+)
+
+REM Verificar que Python funciona
+python --version >nul 2>&1
+if errorlevel 1 (
+    echo ERROR: Python no esta instalado o no esta en PATH
     pause
     exit /b 1
 )
