@@ -1,0 +1,3 @@
+"""
+MindHealth Analytics Backend Application
+"""

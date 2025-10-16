@@ -2,7 +2,7 @@
  * Application Router
  *
  * Defines all application routes using React Router v6
- * MindHealth Analytics routes
+ * MindHealth Analytics routes with protected routes
  */
 
 import { createBrowserRouter } from 'react-router-dom';
@@ -12,14 +12,28 @@ import {
   AnalisisAvanzado,
   AnalisisCostes,
   Configuracion,
-  Login
+  Login,
+  Logout
 } from './pages';
 import { MainLayout } from './components';
+import ProtectedRoute from './components/ProtectedRoute';
 
 const router = createBrowserRouter([
   {
+    path: '/login',
+    element: <Login />,
+  },
+  {
+    path: '/logout',
+    element: <Logout />,
+  },
+  {
     path: '/',
-    element: <MainLayout />,
+    element: (
+      <ProtectedRoute>
+        <MainLayout />
+      </ProtectedRoute>
+    ),
     children: [
       {
         index: true,
@@ -42,10 +56,6 @@ const router = createBrowserRouter([
         element: <Configuracion />,
       },
     ],
-  },
-  {
-    path: '/login',
-    element: <Login />,
   },
 ]);
 

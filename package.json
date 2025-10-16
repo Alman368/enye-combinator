@@ -1,0 +1,28 @@
+{
+  "name": "enye-combinator",
+  "version": "1.0.0",
+  "description": "MindHealth Analytics - Mental Health Data Visualization Platform",
+  "scripts": {
+    "start": "concurrently \"npm run backend\" \"npm run frontend\" --names \"BACKEND,FRONTEND\" --prefix-colors \"bgBlue.bold,bgGreen.bold\"",
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && python3 run_dev.py",
+    "backend:init": "cd backend && python3 init_db.py",
+    "install": "npm run install:frontend && npm run install:backend",
+    "install:frontend": "cd frontend && npm install",
+    "install:backend": "cd backend && pip install -r requirements.txt",
+    "dev": "npm start"
+  },
+  "keywords": [
+    "mental-health",
+    "analytics",
+    "visualization",
+    "fastapi",
+    "react",
+    "typescript"
+  ],
+  "author": "MindHealth Analytics Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
