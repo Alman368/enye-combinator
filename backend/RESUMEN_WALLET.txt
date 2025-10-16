@@ -1,0 +1,74 @@
+╔═══════════════════════════════════════════════════════════════════════╗
+║         INFORMACIÓN EXTRAÍDA DE LA WALLET ORACLE                      ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+📦 DATABASE INFORMACIÓN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Database ID      : TKE06UBEVJ4ZKL7H
+   Service Name Base: gaaea72be18da62_tke06ubevj4zkl7h
+   Región           : eu-madrid-1 (Europa - Madrid)
+   
+🌐 CONEXIÓN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Host             : adb.eu-madrid-1.oraclecloud.com
+   IP               : 155.248.137.242
+   Puerto           : 1522
+   Protocolo        : TCPS (SSL/TLS)
+
+📅 WALLET
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Descargada       : 2025-10-16 16:42:30 UTC
+   Expira           : 2030-10-15 10:03:20 UTC
+   Archivos         : ✅ cwallet.sso
+                      ✅ tnsnames.ora
+                      ✅ sqlnet.ora
+                      ✅ ojdbc.properties
+
+🎯 SERVICE LEVELS DISPONIBLES (de tnsnames.ora)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   ✅ tke06ubevj4zkl7h_low      ← RECOMENDADO para desarrollo
+   ⚡ tke06ubevj4zkl7h_medium
+   🚀 tke06ubevj4zkl7h_high
+   💼 tke06ubevj4zkl7h_tp
+   🔥 tke06ubevj4zkl7h_tpurgent
+
+🔗 HERRAMIENTAS WEB (de README)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Database Actions (SQL Developer Web):
+   https://GAAEA72BE18DA62-TKE06UBEVJ4ZKL7H.adb.eu-madrid-1.oraclecloudapps.com/ords/sql-developer
+   
+   Oracle APEX:
+   https://GAAEA72BE18DA62-TKE06UBEVJ4ZKL7H.adb.eu-madrid-1.oraclecloudapps.com/ords/apex
+
+   Graph Studio:
+   https://GAAEA72BE18DA62-TKE06UBEVJ4ZKL7H.adb.eu-madrid-1.oraclecloudapps.com/graphstudio/
+
+⚠️  CREDENCIALES - NO ESTÁN EN LA WALLET
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   La wallet NO contiene el usuario ni la contraseña.
+   Estas credenciales las configuraste tú al crear la base de datos.
+   
+   Usuario típico: ADMIN (en MAYÚSCULAS)
+   Otros usuarios posibles que hayas creado: MALACKATHON, etc.
+
+📝 ARCHIVO .ENV CONFIGURADO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   He actualizado el archivo .env con:
+   
+   ORACLE_DB_USER=ADMIN
+   ORACLE_DB_PASSWORD=CAMBIAR_ESTE_PASSWORD ← ¡DEBES CAMBIARLO!
+   ORACLE_DB_HOST=adb.eu-madrid-1.oraclecloud.com
+   ORACLE_DB_PORT=1522
+   ORACLE_DB_SERVICE_NAME=tke06ubevj4zkl7h_low
+
+🔧 PRÓXIMOS PASOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   1. Edita backend/.env
+   2. Cambia ORACLE_DB_USER si no es ADMIN
+   3. Cambia ORACLE_DB_PASSWORD por tu contraseña real
+   4. Ejecuta: python3 test_auth.py
+
+📖 DOCUMENTACIÓN COMPLETA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Ver archivo: backend/CONFIGURAR_ORACLE.md
+

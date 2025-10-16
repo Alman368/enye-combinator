@@ -201,7 +201,7 @@ npm run dev
 ```
 
 ### Navigate the App
-- Open http://localhost:5173
+- Open http://localhost:3000
 - Use sidebar to navigate between pages
 - Try all routes: `/`, `/explorer`, `/reports`, `/login`
 

@@ -1,16 +1,14 @@
 /**
  * SeverityRadialChart Component
  *
- * Radial chart showing APR severity distribution with labels
+ * Radial chart showing APR severity distribution
  */
 
-import { TrendingUp } from 'lucide-react';
 import { LabelList, RadialBar, RadialBarChart } from 'recharts';
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
@@ -51,26 +49,23 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 export function SeverityRadialChart() {
-  const totalCases = chartData.reduce((acc, curr) => acc + curr.casos, 0);
-  const nivel1Percentage = Math.round((chartData[0].casos / totalCases) * 100);
-
   return (
     <Card className="flex flex-col">
-      <CardHeader className="items-center pb-0">
-        <CardTitle>Distribución Severidad APR</CardTitle>
-        <CardDescription>Niveles de complejidad (Año 2024)</CardDescription>
+      <CardHeader className="pb-0">
+        <CardTitle>Grado de Severidad</CardTitle>
+        <CardDescription>2024</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={chartConfig}
-          className="mx-auto aspect-square max-h-[250px]"
+          className="mx-auto aspect-square max-h-[300px]"
         >
           <RadialBarChart
             data={chartData}
             startAngle={-90}
             endAngle={380}
-            innerRadius={30}
-            outerRadius={110}
+            innerRadius={35}
+            outerRadius={120}
           >
             <ChartTooltip
               cursor={false}
@@ -87,14 +82,6 @@ export function SeverityRadialChart() {
           </RadialBarChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col gap-2 text-sm">
-        <div className="flex items-center gap-2 font-medium leading-none">
-          {nivel1Percentage}% en Nivel 1 (baja complejidad) <TrendingUp className="h-4 w-4" />
-        </div>
-        <div className="leading-none text-muted-foreground">
-          Mostrando distribución por severidad APR-GRD
-        </div>
-      </CardFooter>
     </Card>
   );
 }

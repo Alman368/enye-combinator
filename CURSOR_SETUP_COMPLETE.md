@@ -261,7 +261,7 @@ cat frontend/COLOR_PALETTE_IMPLEMENTATION.md
 
 ## 🌐 Dev Server Status
 
-✅ **Running on**: http://localhost:5173
+✅ **Running on**: http://localhost:3000
 
 **Try it now:**
 - Open the URL

@@ -114,7 +114,7 @@ cd frontend
 npm run dev
 ```
 
-The app should now be running at http://localhost:5173
+The app should now be running at http://localhost:3000
 
 ### What You'll See
 1. **Sidebar on the left** with navigation menu

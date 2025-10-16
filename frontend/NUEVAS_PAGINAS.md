@@ -266,7 +266,7 @@ frontend/src/pages/
 
 2. **Abrir en navegador**:
    ```
-   http://localhost:5173
+   http://localhost:3000
    ```
 
 3. **Navegar**:

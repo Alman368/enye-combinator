@@ -1,0 +1,68 @@
+services:
+  backend:
+    container_name: backend
+    build:
+      context: backend
+      dockerfile: Dockerfile
+    expose:
+      - "8000"
+    networks:
+      - internal
+      - external
+    volumes:
+      - ./backend/logs:/app/logs/
+    environment:
+      - DNS_DOMAIN=.fluwy.es
+    develop:
+      watch:
+        - action: sync+restart
+          path: ./backend/
+          target: /app
+          ignore:
+            - logs/
+
+  frontend:
+    image: node:20
+    container_name: react_dev
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    expose:
+      - "3000"
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - VITE_DEV_SERVER_HOST=0.0.0.0
+      - VITE_DEV_SERVER_PORT=3000
+    command: >
+      sh -c "npm install &&
+             npm install i18next react-i18next i18next-http-backend i18next-browser-languagedetector --save &&
+             npm run dev -- --host --port 3000"
+    networks:
+      - internal
+      - external
+
+  nginx:
+    container_name: nginx
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - internal
+      - external
+
+networks:
+  internal:
+    driver: bridge
+    internal: true
+  external:
+    driver: bridge
+

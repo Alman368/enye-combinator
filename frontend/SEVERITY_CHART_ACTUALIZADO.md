@@ -237,7 +237,7 @@ const nivel1Percentage = Math.round((chartData[0].casos / totalCases) * 100);
 
 ## 🚀 Para Probarlo
 
-1. **Abre:** http://localhost:5173
+1. **Abre:** http://localhost:3000
 2. **Ve al Dashboard**
 3. **Busca:** "⚠️ Distribución Severidad APR"
 4. **Observa:**

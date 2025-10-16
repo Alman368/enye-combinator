@@ -19,7 +19,7 @@ const MainLayout = () => {
       <AppSidebar />
       <SidebarInset>
         <Header />
-        <main className="flex-1 overflow-auto p-4 md:p-6 lg:p-8">
+        <main className="flex-1 overflow-auto p-4 pt-2 md:p-6 md:pt-3">
           <Outlet />
         </main>
       </SidebarInset>

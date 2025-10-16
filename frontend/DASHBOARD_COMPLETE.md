@@ -267,12 +267,12 @@ Actualmente usa datos de ejemplo:
 
 2. **Abre en el navegador:**
    ```
-   http://localhost:5173
+   http://localhost:3000
    ```
 
 3. **Navega al Dashboard:**
    - Click en "Dashboard" en el sidebar
-   - O ve directamente a: `http://localhost:5173/`
+   - O ve directamente a: `http://localhost:3000/`
 
 ---
 

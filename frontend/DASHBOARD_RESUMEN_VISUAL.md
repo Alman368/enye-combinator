@@ -8,7 +8,7 @@ Tu Dashboard está completamente implementado y listo para el hackathon!
 
 ## 🎯 Lo que Tienes Ahora
 
-### 📊 **Dashboard Principal** (`http://localhost:5173`)
+### 📊 **Dashboard Principal** (`http://localhost:3000`)
 
 ```
 ┌─────────────────────────────────────────────────────┐
@@ -129,12 +129,12 @@ Card especial con:
 
 ### 1. Servidor corriendo: ✅
 ```
-http://localhost:5173
+http://localhost:3000
 ```
 
 ### 2. Navegar al Dashboard:
 - Click en "Dashboard" en sidebar
-- O directo: `http://localhost:5173/`
+- O directo: `http://localhost:3000/`
 
 ### 3. Explorar:
 - ✅ Ver las 3 cards de KPI
