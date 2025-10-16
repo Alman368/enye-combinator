@@ -1,0 +1,102 @@
+INSTRUCCIONES PARA WINDOWS
+===========================
+
+Si no ves el mensaje "Using Oracle database", sigue estos pasos:
+
+1. VERIFICAR QUE EL .env EXISTE Y TIENE LAS CREDENCIALES DESCOMENTADAS
+   
+   Abrir: backend\.env
+   
+   Debe tener esto SIN # al inicio:
+   
+   ORACLE_DB_USER=ADMIN
+   ORACLE_DB_PASSWORD=tu_password_real_aqui
+   ORACLE_DB_SERVICE_NAME=tke06ubevj4zkl7h_low
+   ORACLE_DB_HOST=adb.sa-santiago-1.oraclecloud.com
+   ORACLE_DB_PORT=1522
+   
+   SECRET_KEY=tu_secret_key_super_segura_cambiame_en_produccion_123456789
+   ALGORITHM=HS256
+   ACCESS_TOKEN_EXPIRE_MINUTES=30
+   REFRESH_TOKEN_EXPIRE_DAYS=7
+   DATABASE_URL=sqlite:///./mindhealth.db
+   API_V1_STR=/api/v1
+   PROJECT_NAME=MindHealth Analytics API
+   VERSION=1.0.0
+   BACKEND_CORS_ORIGINS=["http://localhost:5173","http://localhost:3000","https://combinator.fluwy.es"]
+   ENVIRONMENT=development
+
+
+2. VERIFICAR QUE EL VENV ESTÁ CREADO Y ACTIVADO
+
+   Abrir CMD en la carpeta raíz del proyecto:
+   
+   python -m venv venv
+   venv\Scripts\activate
+   pip install -r backend\requirements.txt
+
+
+3. VERIFICAR QUE EL WALLET ESTÁ EN LA CARPETA CORRECTA
+
+   Debe existir: backend\wallet\
+   Con archivos: cwallet.sso, tnsnames.ora, sqlnet.ora, etc.
+
+
+4. INICIAR EL PROYECTO
+
+   Desde la raíz del proyecto:
+   
+   npm start
+
+   O manualmente:
+   
+   - Terminal 1:
+     cd backend
+     ..\venv\Scripts\activate
+     python run_dev.py
+   
+   - Terminal 2:
+     cd frontend
+     npm run dev
+
+
+5. VERIFICAR LA SALIDA
+
+   Deberías ver:
+   
+   [BACKEND] 🔌 Using Oracle database: tke06ubevj4zkl7h_low
+   [BACKEND] INFO:     Uvicorn running on http://0.0.0.0:8000
+
+
+SI SIGUE SIN FUNCIONAR:
+
+A. Verificar que Python lee el .env:
+   
+   cd backend
+   ..\venv\Scripts\activate
+   python -c "from app.core.config import settings; print(f'User: {settings.ORACLE_DB_USER}'); print(f'Service: {settings.ORACLE_DB_SERVICE_NAME}')"
+   
+   Debería imprimir:
+   User: ADMIN
+   Service: tke06ubevj4zkl7h_low
+
+
+B. Si sale "User: " (vacío), el .env no se está leyendo:
+   
+   - Asegúrate de que el archivo se llama exactamente ".env" (sin extensión .txt)
+   - Asegúrate de que está en backend\.env (no en la raíz)
+   - Reinicia el terminal
+
+
+C. Si sale el error "oracledb.exceptions.DatabaseError: ORA-01017":
+   
+   - La contraseña de Oracle está mal
+   - Verifica en Oracle Cloud que la contraseña sea correcta
+
+
+D. Si no encuentra 'fastapi':
+   
+   - El venv no está activado correctamente
+   - Ejecuta: venv\Scripts\activate
+   - Verifica que aparece "(venv)" al inicio del prompt
+
