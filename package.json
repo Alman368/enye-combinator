@@ -5,7 +5,7 @@
   "scripts": {
     "start": "concurrently \"npm run backend\" \"npm run frontend\" --names \"BACKEND,FRONTEND\" --prefix-colors \"bgBlue.bold,bgGreen.bold\"",
     "frontend": "cd frontend && npm run dev",
-    "backend": "cd backend && python3 run_dev.py",
+    "backend": "./backend/start.sh",
     "backend:init": "cd backend && python3 init_db.py",
     "install": "npm run install:frontend && npm run install:backend",
     "install:frontend": "cd frontend && npm install",

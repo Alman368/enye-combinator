@@ -176,3 +176,4 @@ Después de iniciar la base de datos:
 - Para desarrollo, `_medium` o `_low` son suficientes (más económicos)
 - Revisa los costos de mantener la DB activa constantemente
 
+
