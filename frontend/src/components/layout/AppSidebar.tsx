@@ -14,10 +14,7 @@ import { Link, useLocation } from 'react-router-dom';
 import {
   LayoutDashboard,
   Database,
-  TrendingUp,
   DollarSign,
-  Settings,
-  Brain,
   User,
 } from 'lucide-react';
 import {
@@ -33,7 +30,7 @@ import {
   SidebarHeader,
 } from '@/components/ui/sidebar';
 
-// Menu items for navigation - MindHealth Analytics
+// Menu items for navigation - Ñ Combinator
 const menuItems = [
   {
     title: 'General',
@@ -47,19 +44,9 @@ const menuItems = [
     icon: Database,
   },
   {
-    title: 'Análisis Avanzado',
-    url: '/analisis',
-    icon: TrendingUp,
-  },
-  {
     title: 'Análisis de Costes',
     url: '/costes',
     icon: DollarSign,
-  },
-  {
-    title: 'Configuración',
-    url: '/configuracion',
-    icon: Settings,
   },
 ];
 
@@ -70,11 +57,8 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarHeader className="border-b p-4">
         <div className="flex items-center gap-2">
-          <Brain className="h-6 w-6 text-primary" />
-          <div className="flex flex-col">
-            <span className="font-semibold text-sm">MindHealth Analytics</span>
-            <span className="text-xs text-muted-foreground">Salud Mental</span>
-          </div>
+          <img src="/favicon.png" alt="Ñ Combinator" className="h-6 w-6" />
+          <span className="font-semibold text-sm">Ñ Combinator</span>
         </div>
       </SidebarHeader>
 
