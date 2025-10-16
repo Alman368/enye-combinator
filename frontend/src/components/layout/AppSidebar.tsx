@@ -17,11 +17,8 @@ import {
   TrendingUp,
   DollarSign,
   Settings,
-<<<<<<< HEAD
   Brain,
   User,
-=======
->>>>>>> bc346bf0c1af36aa48f7c7055967431454a1adb5
 } from 'lucide-react';
 import {
   Sidebar,
@@ -36,7 +33,7 @@ import {
   SidebarHeader,
 } from '@/components/ui/sidebar';
 
-// Menu items for navigation - Ñ Combinator
+// Menu items for navigation - MindHealth Analytics
 const menuItems = [
   {
     title: 'General',
@@ -73,18 +70,10 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarHeader className="border-b p-4">
         <div className="flex items-center gap-2">
-          <img
-            src="/logo.png"
-            alt="Ñ Combinator"
-            className="h-8 w-8 object-contain"
-            onError={(e) => {
-              // Fallback if logo.png doesn't exist yet - hide the img
-              e.currentTarget.style.display = 'none';
-            }}
-          />
+          <Brain className="h-6 w-6 text-primary" />
           <div className="flex flex-col">
-            <span className="font-semibold text-sm">Ñ Combinator</span>
-            <span className="text-xs text-muted-foreground">Mental Health Analytics</span>
+            <span className="font-semibold text-sm">MindHealth Analytics</span>
+            <span className="text-xs text-muted-foreground">Salud Mental</span>
           </div>
         </div>
       </SidebarHeader>
@@ -113,7 +102,6 @@ export function AppSidebar() {
       </SidebarContent>
 
       <SidebarFooter className="border-t p-4">
-<<<<<<< HEAD
         <div className="flex items-center gap-3">
           <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10">
             <User className="h-4 w-4 text-primary" />
@@ -122,10 +110,6 @@ export function AppSidebar() {
             <span className="text-sm font-medium">Usuario Admin</span>
             <span className="text-xs text-muted-foreground">admin@mindhealth.com</span>
           </div>
-=======
-        <div className="text-xs text-muted-foreground">
-          © 2025 Ñ Combinator
->>>>>>> bc346bf0c1af36aa48f7c7055967431454a1adb5
         </div>
       </SidebarFooter>
     </Sidebar>
