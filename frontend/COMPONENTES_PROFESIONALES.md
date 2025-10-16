@@ -294,7 +294,7 @@ src/components/dashboard/
 ## 📸 Vista Previa
 
 Para ver los cambios:
-1. Abre: http://localhost:5173
+1. Abre: http://localhost:3000
 2. Navega al Dashboard
 3. Observa los títulos limpios sin emojis
 4. Toda la funcionalidad se mantiene

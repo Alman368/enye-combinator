@@ -135,7 +135,7 @@ Follow the **DEVELOPMENT_GUIDE.md** for detailed step-by-step instructions:
 
 ```bash
 # Development
-npm run dev              # Start dev server (localhost:5173)
+npm run dev              # Start dev server (localhost:3000)
 npm run build           # Build for production
 npm run preview         # Preview production build
 npm run lint            # Run ESLint

@@ -212,7 +212,7 @@ const mockRecords = [
 
 1. **Navega en el sidebar:**
    - Click en "Datos y Registros"
-   - O ve a: http://localhost:5173/datos
+   - O ve a: http://localhost:3000/datos
 
 2. **Explorar:**
    - Ver filtros avanzados

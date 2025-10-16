@@ -37,7 +37,7 @@ This will:
 
 ### 🌐 Access Points
 
-- **Frontend**: http://localhost:5173
+- **Frontend**: http://localhost:3000
 - **Backend API**: http://localhost:8000
 - **API Documentation**: http://localhost:8000/api/v1/docs
 
@@ -105,7 +105,7 @@ Edit `backend/.env`:
 ```env
 DATABASE_URL=postgresql://user:pass@localhost:5432/dbname
 SECRET_KEY=your-secret-key
-BACKEND_CORS_ORIGINS=["http://localhost:5173"]
+BACKEND_CORS_ORIGINS=["http://localhost:3000"]
 ```
 
 ### Frontend Configuration
@@ -116,7 +116,7 @@ The frontend is pre-configured to connect to the backend at `http://localhost:80
 ### Common Issues
 
 1. **Port already in use**
-   - Frontend (5173): Kill the process or change port in `frontend/vite.config.ts`
+   - Frontend (3000): Kill the process or change port in `frontend/vite.config.ts`
    - Backend (8000): Kill the process or change port in `backend/run_dev.py`
 
 2. **Database connection errors**

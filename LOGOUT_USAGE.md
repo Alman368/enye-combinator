@@ -14,7 +14,7 @@ La aplicación ahora tiene una ruta `/logout` que automáticamente:
 ### Opción 1: Navegación Directa
 Simplemente navega a:
 ```
-http://localhost:5173/logout
+http://localhost:3000/logout
 ```
 
 ### Opción 2: Programáticamente

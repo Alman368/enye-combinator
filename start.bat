@@ -63,7 +63,7 @@ echo All dependencies installed!
 echo.
 echo Starting servers...
 echo    - Backend:  http://localhost:8000
-echo    - Frontend: http://localhost:5173
+echo    - Frontend: http://localhost:3000
 echo    - API Docs: http://localhost:8000/api/v1/docs
 echo.
 
