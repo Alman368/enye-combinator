@@ -10,4 +10,18 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  server: {
+    host: '0.0.0.0',
+    port: 3000,
+    allowedHosts: [
+      'combinator.fluwy.es',
+      'localhost',
+      '.fluwy.es'
+    ],
+    hmr: {
+      host: 'combinator.fluwy.es',
+      protocol: 'wss',
+      port: 443
+    }
+  }
 })
