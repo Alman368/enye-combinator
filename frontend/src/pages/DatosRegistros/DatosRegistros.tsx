@@ -5,7 +5,7 @@
  */
 
 import { useState, useMemo } from 'react';
-import { Download, FileSpreadsheet, ChevronLeft, ChevronRight, Filter as FilterIcon, X, Plus } from 'lucide-react';
+import { FileSpreadsheet, ChevronLeft, ChevronRight, Filter as FilterIcon, X, Plus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import {
@@ -453,172 +453,152 @@ const DatosRegistros = () => {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
-      <div>
-        <h2 className="text-3xl font-bold tracking-tight">Datos y Registros</h2>
-        <p className="text-muted-foreground">
-          Explora y gestiona los registros de diagnósticos de salud mental
-        </p>
-      </div>
-
-      {/* Advanced Filters */}
-      <Card>
-        <CardHeader className="pb-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <FilterIcon className="h-4 w-4 text-muted-foreground" />
-              <span className="text-sm font-medium">
-                {activeFilters.length > 0 ? `Filtered by ${activeFilters.length} ${activeFilters.length === 1 ? 'rule' : 'rules'}` : 'No filters applied'}
-              </span>
-            </div>
-            {filters.length > 0 && (
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={clearFilters}
-                className="h-8 text-xs"
-              >
-                Limpiar todo
-              </Button>
-            )}
-          </div>
-        </CardHeader>
-        <CardContent className="space-y-3">
-          {/* Filter Rules */}
-          {filters.map((filter) => {
-            const selectedField = filterFields.find(f => f.value === filter.field);
-            const fieldType = selectedField?.type || 'text';
-            const operators = getOperatorsForField(fieldType);
-
-            return (
-              <div key={filter.id} className="flex items-center gap-2 p-3 bg-muted/30 rounded-lg border">
-                {/* Field Selector */}
-                <Select
-                  value={filter.field}
-                  onValueChange={(value) => updateFilter(filter.id, 'field', value)}
-                >
-                  <SelectTrigger className="w-[200px] h-9 bg-background">
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {filterFields.map((field) => (
-                      <SelectItem key={field.value} value={field.value}>
-                        {field.label}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-
-                {/* Operator Selector */}
-                <Select
-                  value={filter.operator}
-                  onValueChange={(value) => updateFilter(filter.id, 'operator', value)}
-                >
-                  <SelectTrigger className="w-[100px] h-9 bg-background">
-                    <SelectValue>
-                      {operators.find(op => op.value === filter.operator)?.symbol || '='}
-                    </SelectValue>
-                  </SelectTrigger>
-                  <SelectContent>
-                    {operators.map((op) => (
-                      <SelectItem key={op.value} value={op.value}>
-                        <span className="flex items-center gap-2">
-                          <span className="text-muted-foreground font-mono">[ {op.symbol} ]</span>
-                          <span>{op.label}</span>
-                        </span>
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-
-                {/* Value Input */}
-                {selectedField?.type === 'select' && selectedField.options ? (
-                  <Select
-                    value={filter.value}
-                    onValueChange={(value) => updateFilter(filter.id, 'value', value)}
-                  >
-                    <SelectTrigger className="flex-1 h-9 bg-background">
-                      <SelectValue placeholder="Seleccionar valor" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {selectedField.options.map((option) => (
-                        <SelectItem key={option} value={option}>
-                          {option}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                ) : (
-                  <Input
-                    type={fieldType === 'number' ? 'number' : 'text'}
-                    value={filter.value}
-                    onChange={(e) => updateFilter(filter.id, 'value', e.target.value)}
-                    placeholder="Ingresar valor"
-                    className="flex-1 h-9 bg-background"
-                  />
-                )}
-
-                {/* Remove Button */}
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={() => removeFilter(filter.id)}
-                  className="h-9 w-9 hover:bg-destructive/10 hover:text-destructive"
-                >
-                  <X className="h-4 w-4" />
-                </Button>
-              </div>
-            );
-          })}
-
-          {/* Add Filter and Apply Buttons */}
-          <div className="flex items-center justify-between pt-2">
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={addFilter}
-              className="h-9 gap-2"
-            >
-              <Plus className="h-4 w-4" />
-              Agregar filtro
-            </Button>
-
-            {filters.length > 0 && (
-              <Button
-                onClick={applyFilters}
-                size="sm"
-                className="h-9"
-              >
-                Aplicar filtros
-              </Button>
-            )}
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Export Buttons and Record Count */}
-      <div className="flex items-center justify-between">
-        <div className="flex gap-2">
-          <Button variant="outline">
-            <Download className="h-4 w-4 mr-2" />
-            Exportar CSV
-          </Button>
-          <Button variant="outline">
-            <FileSpreadsheet className="h-4 w-4 mr-2" />
-            Exportar Excel
-          </Button>
-        </div>
-        <div className="text-sm text-muted-foreground font-medium">
-          {filteredRecords.length} {filteredRecords.length === 1 ? 'registro encontrado' : 'registros encontrados'}
-          {activeFilters.length > 0 && ` (${mockRecords.length} totales)`}
-        </div>
-      </div>
-
       {/* Data Table */}
       <Card>
         <CardHeader>
-          <CardTitle>Tabla de Registros</CardTitle>
-          <CardDescription>Paginada - 20 registros por página</CardDescription>
+          <div className="flex items-center justify-between mb-4">
+            <div>
+              <CardTitle>Tabla de Registros</CardTitle>
+              <CardDescription>Paginada - 20 registros por página</CardDescription>
+            </div>
+            <div className="flex items-center gap-2">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={addFilter}
+                className="h-9 gap-2"
+              >
+                <FilterIcon className="h-4 w-4" />
+                {activeFilters.length > 0 ? `Filtrado por ${activeFilters.length}` : 'Filtrar'}
+              </Button>
+              <Button variant="outline" size="sm">
+                <FileSpreadsheet className="h-4 w-4 mr-2" />
+                Exportar Excel
+              </Button>
+            </div>
+          </div>
+
+          {/* Filter Rules - Only show if there are filters */}
+          {filters.length > 0 && (
+            <div className="space-y-3 pb-4 border-b">
+              {filters.map((filter) => {
+                const selectedField = filterFields.find(f => f.value === filter.field);
+                const fieldType = selectedField?.type || 'text';
+                const operators = getOperatorsForField(fieldType);
+
+                return (
+                  <div key={filter.id} className="flex items-center gap-2 p-3 bg-muted/30 rounded-lg border">
+                    {/* Field Selector */}
+                    <Select
+                      value={filter.field}
+                      onValueChange={(value) => updateFilter(filter.id, 'field', value)}
+                    >
+                      <SelectTrigger className="w-[200px] h-9 bg-background">
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {filterFields.map((field) => (
+                          <SelectItem key={field.value} value={field.value}>
+                            {field.label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+
+                    {/* Operator Selector */}
+                    <Select
+                      value={filter.operator}
+                      onValueChange={(value) => updateFilter(filter.id, 'operator', value)}
+                    >
+                      <SelectTrigger className="w-[100px] h-9 bg-background">
+                        <SelectValue>
+                          {operators.find(op => op.value === filter.operator)?.symbol || '='}
+                        </SelectValue>
+                      </SelectTrigger>
+                      <SelectContent>
+                        {operators.map((op) => (
+                          <SelectItem key={op.value} value={op.value}>
+                            <span className="flex items-center gap-2">
+                              <span className="text-muted-foreground font-mono">[ {op.symbol} ]</span>
+                              <span>{op.label}</span>
+                            </span>
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+
+                    {/* Value Input */}
+                    {selectedField?.type === 'select' && selectedField.options ? (
+                      <Select
+                        value={filter.value}
+                        onValueChange={(value) => updateFilter(filter.id, 'value', value)}
+                      >
+                        <SelectTrigger className="flex-1 h-9 bg-background">
+                          <SelectValue placeholder="Seleccionar valor" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {selectedField.options.map((option) => (
+                            <SelectItem key={option} value={option}>
+                              {option}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    ) : (
+                      <Input
+                        type={fieldType === 'number' ? 'number' : 'text'}
+                        value={filter.value}
+                        onChange={(e) => updateFilter(filter.id, 'value', e.target.value)}
+                        placeholder="Ingresar valor"
+                        className="flex-1 h-9 bg-background"
+                      />
+                    )}
+
+                    {/* Remove Button */}
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => removeFilter(filter.id)}
+                      className="h-9 w-9 hover:bg-destructive/10 hover:text-destructive"
+                    >
+                      <X className="h-4 w-4" />
+                    </Button>
+                  </div>
+                );
+              })}
+
+              {/* Apply and Clear Buttons */}
+              <div className="flex items-center justify-between">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={addFilter}
+                  className="h-9 gap-2"
+                >
+                  <Plus className="h-4 w-4" />
+                  Agregar filtro
+                </Button>
+
+                <div className="flex gap-2">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={clearFilters}
+                    className="h-9"
+                  >
+                    Limpiar
+                  </Button>
+                  <Button
+                    onClick={applyFilters}
+                    size="sm"
+                    className="h-9"
+                  >
+                    Aplicar filtros
+                  </Button>
+                </div>
+              </div>
+            </div>
+          )}
         </CardHeader>
         <CardContent>
           <div className="relative overflow-x-auto">
@@ -675,13 +655,6 @@ const DatosRegistros = () => {
               Siguiente
               <ChevronRight className="h-4 w-4 ml-2" />
             </Button>
-          </div>
-
-          {/* Info */}
-          <div className="mt-4 p-3 rounded-lg bg-muted/50 border">
-            <p className="text-xs text-muted-foreground">
-              💡 <strong>Consejo:</strong> Haz click en cualquier fila para ver los detalles completos del registro
-            </p>
           </div>
         </CardContent>
       </Card>

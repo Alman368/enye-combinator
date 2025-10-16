@@ -18,6 +18,7 @@ import {
   DollarSign,
   Settings,
   Brain,
+  User,
 } from 'lucide-react';
 import {
   Sidebar,
@@ -35,7 +36,7 @@ import {
 // Menu items for navigation - MindHealth Analytics
 const menuItems = [
   {
-    title: 'Dashboard',
+    title: 'General',
     subtitle: 'Inicio',
     url: '/',
     icon: LayoutDashboard,
@@ -101,8 +102,14 @@ export function AppSidebar() {
       </SidebarContent>
 
       <SidebarFooter className="border-t p-4">
-        <div className="text-xs text-muted-foreground">
-          © 2025 MindHealth Analytics
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10">
+            <User className="h-4 w-4 text-primary" />
+          </div>
+          <div className="flex flex-col">
+            <span className="text-sm font-medium">Usuario Admin</span>
+            <span className="text-xs text-muted-foreground">admin@mindhealth.com</span>
+          </div>
         </div>
       </SidebarFooter>
     </Sidebar>
