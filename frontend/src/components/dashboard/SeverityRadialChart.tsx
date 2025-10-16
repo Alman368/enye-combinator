@@ -58,14 +58,14 @@ export function SeverityRadialChart() {
       <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={chartConfig}
-          className="mx-auto aspect-square max-h-[450px]"
+          className="mx-auto aspect-square max-h-[300px]"
         >
           <RadialBarChart
             data={chartData}
             startAngle={-90}
             endAngle={380}
-            innerRadius={50}
-            outerRadius={180}
+            innerRadius={35}
+            outerRadius={120}
           >
             <ChartTooltip
               cursor={false}

@@ -16,7 +16,8 @@ export default defineConfig(({ mode }) => {
     },
     server: {
       host: '0.0.0.0',
-      port: 3000,
+      port: 5173,
+      strictPort: false, // Allow fallback to other ports if 5173 is busy
       allowedHosts: [
         'combinator.fluwy.es',
         'localhost',
@@ -28,11 +29,7 @@ export default defineConfig(({ mode }) => {
         host: 'combinator.fluwy.es',
         protocol: 'wss',
         port: 443
-      } : {
-        // Development defaults to localhost
-        host: 'localhost',
-        port: 3129
-      }
+      } : true // Use default HMR settings for development
     }
   }
 })

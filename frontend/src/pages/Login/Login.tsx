@@ -5,7 +5,7 @@
  */
 
 import { useState } from 'react';
-import { Brain, Loader2, AlertCircle } from 'lucide-react';
+import { Loader2, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -30,7 +30,7 @@ const Login = () => {
       navigate('/');
     } catch (err: any) {
       console.error('Login error:', err);
-      
+
       // Handle different error types
       if (err.response?.status === 401) {
         setError('Email o contraseña incorrectos');
@@ -54,8 +54,8 @@ const Login = () => {
     <div className="min-h-screen flex items-center justify-center bg-background">
       <div className="w-full max-w-md p-8 space-y-6">
         <div className="flex flex-col items-center text-center">
-          <Brain className="h-12 w-12 text-primary mb-4" />
-          <h1 className="text-3xl font-bold">MindHealth Analytics</h1>
+          <img src="/favicon.png" alt="Ñ Combinator" className="h-12 w-12 mb-4" />
+          <h1 className="text-3xl font-bold">Ñ Combinator</h1>
           <p className="text-muted-foreground mt-2">
             Inicia sesión para acceder al dashboard
           </p>
@@ -96,9 +96,9 @@ const Login = () => {
               />
             </div>
 
-            <Button 
-              type="submit" 
-              className="w-full" 
+            <Button
+              type="submit"
+              className="w-full"
               disabled={loading}
             >
               {loading ? (
