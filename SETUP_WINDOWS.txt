@@ -1,0 +1,66 @@
+================================================================
+INSTRUCCIONES PARA WINDOWS
+================================================================
+
+PROBLEMA: "python: command not found" o "venv/bin/activate not found"
+
+SOLUCION: Estan usando Git Bash. Deben usar CMD o PowerShell.
+
+================================================================
+OPCION 1: CMD (RECOMENDADO)
+================================================================
+
+1. Presiona Windows + R
+2. Escribe: cmd
+3. Presiona Enter
+4. Ve a la carpeta del proyecto:
+   cd C:\ruta\a\tu\proyecto\enye-combinator\backend
+5. Ejecuta:
+   start.bat
+
+================================================================
+OPCION 2: PowerShell
+================================================================
+
+1. Presiona Windows + X
+2. Selecciona "Windows PowerShell"
+3. Ve a la carpeta:
+   cd C:\ruta\a\tu\proyecto\enye-combinator\backend
+4. Ejecuta:
+   .\start.bat
+
+================================================================
+OPCION 3: Explorador de Windows (MAS FACIL)
+================================================================
+
+1. Abre el explorador de archivos
+2. Ve a: proyecto\enye-combinator\backend
+3. Haz DOBLE CLIC en: start.bat
+4. Se abrira una ventana negra con el servidor
+
+================================================================
+VERIFICAR QUE PYTHON ESTA INSTALADO (CMD)
+================================================================
+
+En CMD, ejecuta:
+   python --version
+
+Deberia salir: Python 3.x.x
+
+Si sale "python no se reconoce":
+   1. Descarga Python de: https://www.python.org/downloads/
+   2. Durante la instalacion, marca: "Add Python to PATH"
+   3. Reinstala Python
+
+================================================================
+SI QUIEREN USAR Git Bash (NO RECOMENDADO)
+================================================================
+
+Deben crear alias en Git Bash:
+   echo "alias python='winpty python.exe'" >> ~/.bashrc
+   source ~/.bashrc
+
+Pero es mejor usar CMD o PowerShell.
+
+================================================================
+
