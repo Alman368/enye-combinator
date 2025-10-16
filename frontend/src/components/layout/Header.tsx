@@ -6,19 +6,27 @@
  */
 
 import { SidebarTrigger } from '@/components/ui/sidebar';
-import { Separator } from '@/components/ui/separator';
-import { Bell, User } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
 export function Header() {
   return (
-    <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
+    <header className="flex h-16 shrink-0 items-center gap-2 px-4">
       <SidebarTrigger className="-ml-1" />
+<<<<<<< HEAD
+=======
       <Separator orientation="vertical" className="h-6" />
 
       <div className="flex flex-1 items-center justify-between">
-        <div>
-          <h1 className="text-lg font-semibold">MindHealth Analytics</h1>
+        <div className="flex items-center gap-2">
+          <img
+            src="/logo.png"
+            alt="Ñ Combinator"
+            className="h-8 w-8 object-contain"
+            onError={(e) => {
+              // Fallback if logo.png doesn't exist yet
+              e.currentTarget.style.display = 'none';
+            }}
+          />
+          <h1 className="text-lg font-semibold">Ñ Combinator</h1>
         </div>
 
         <div className="flex items-center gap-2">
@@ -30,6 +38,7 @@ export function Header() {
           </Button>
         </div>
       </div>
+>>>>>>> bc346bf0c1af36aa48f7c7055967431454a1adb5
     </header>
   );
 }

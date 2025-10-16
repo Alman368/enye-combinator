@@ -1,0 +1,10 @@
+services:
+  certbot:
+    image: certbot/certbot:latest
+    container_name: certbot
+    ports:
+      - "80:80"
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
+    entrypoint: /bin/sh
+    command: -c "certbot certonly --standalone --non-interactive --agree-tos --email vegonza3@gmail.com --cert-name combinator.fluwy.es -d combinator.fluwy.es"
