@@ -51,21 +51,21 @@ const chartConfig = {
 export function SeverityRadialChart() {
   return (
     <Card className="flex flex-col">
-      <CardHeader className="items-center pb-0">
-        <CardTitle>Severidad</CardTitle>
+      <CardHeader className="pb-0">
+        <CardTitle>Grado de Severidad</CardTitle>
         <CardDescription>2024</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={chartConfig}
-          className="mx-auto aspect-square max-h-[350px]"
+          className="mx-auto aspect-square max-h-[450px]"
         >
           <RadialBarChart
             data={chartData}
             startAngle={-90}
             endAngle={380}
-            innerRadius={40}
-            outerRadius={140}
+            innerRadius={50}
+            outerRadius={180}
           >
             <ChartTooltip
               cursor={false}
