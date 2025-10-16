@@ -12,15 +12,15 @@ import { SeverityRadialChart } from '@/components/dashboard/SeverityRadialChart'
 
 const Dashboard = () => {
   return (
-        <div className="space-y-4">
-      {/* KPI Cards */}
-      <StatsCards />
-
-      {/* Timeline Chart */}
-      <TimelineChart />
+    <div className="space-y-2">
+      {/* First Row: Timeline Chart + KPI Cards */}
+      <div className="grid gap-2 lg:grid-cols-[1fr_300px]">
+        <TimelineChart />
+        <StatsCards />
+      </div>
 
       {/* Second Row: Top Diagnósticos and Severity */}
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid gap-2 lg:grid-cols-2">
         <TopDiagnosticsChart />
         <SeverityRadialChart />
       </div>
