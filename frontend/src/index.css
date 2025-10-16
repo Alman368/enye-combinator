@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Medical Professional Color Palette */
+    /* Background - Clean White/Light */
+    --background: 0 0% 100%; /* #FFFFFF */
+    --foreground: 222 47% 11%; /* #0F172A - Dark blue-gray text */
+
+    /* Card Backgrounds */
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 222 47% 11%; /* #0F172A */
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Primary - Dark Medical Blue #0C4A6E */
+    --primary: 201 83% 24%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Light Background */
+    --secondary: 210 40% 98%; /* #F8FAFC */
+    --secondary-foreground: 222 47% 11%;
+
+    /* Muted - For secondary text and backgrounds */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 35%; /* #475569 - Medium gray */
+
+    /* Accent - Subtle highlight */
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+
+    /* Destructive/Error - Critical Red #DC2626 */
+    --destructive: 0 73% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Border - Light Gray #E2E8F0 */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 201 83% 24%; /* Primary color for focus rings */
+
+    /* Chart Colors - Medical Theme */
+    --chart-1: 201 83% 24%; /* Primary blue #0C4A6E */
+    --chart-2: 185 94% 37%; /* Teal #0891B2 */
+    --chart-3: 160 94% 31%; /* Success green #059669 */
+    --chart-4: 271 76% 53%; /* Purple #7C3AED */
+    --chart-5: 31 95% 44%; /* Warning orange #D97706 */
+    --radius: 0.5rem;
+
+    /* Sidebar - Medical Theme */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 201 83% 24%; /* Primary blue */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 201 83% 24%;
+  }
+  .dark {
+    /* Dark mode - Professional medical theme */
+    --background: 222 47% 11%; /* #0F172A */
+    --foreground: 0 0% 98%;
+
+    --card: 215 25% 15%; /* Slightly lighter than background */
+    --card-foreground: 0 0% 98%;
+
+    --popover: 215 25% 15%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Primary - Lighter blue for dark mode */
+    --primary: 199 89% 48%; /* Lighter medical blue */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 215 25% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 215 25% 20%;
+    --muted-foreground: 215 16% 65%; /* Lighter gray for readability */
+
+    --accent: 215 25% 20%;
+    --accent-foreground: 0 0% 98%;
+
+    /* Destructive - Softer red for dark mode */
+    --destructive: 0 63% 45%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 215 25% 25%;
+    --input: 215 25% 25%;
+    --ring: 199 89% 48%;
+
+    /* Chart Colors - Adjusted for dark mode */
+    --chart-1: 199 89% 48%; /* Lighter primary blue */
+    --chart-2: 185 84% 50%; /* Lighter teal */
+    --chart-3: 160 84% 40%; /* Lighter green */
+    --chart-4: 271 76% 60%; /* Adjusted purple */
+    --chart-5: 31 90% 55%; /* Lighter orange */
+
+    /* Sidebar - Dark mode */
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 199 89% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 25% 20%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 215 25% 25%;
+    --sidebar-ring: 199 89% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

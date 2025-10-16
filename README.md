@@ -1,2 +1,2 @@
-# --combinator
+# Enye Combinator
 Que bieeen. Ganamos!

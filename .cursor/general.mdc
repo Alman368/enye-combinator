@@ -1,0 +1,172 @@
+---
+alwaysApply: true
+---
+## 📊 Data Context
+
+### What Data We're Visualizing
+- **Primary Mental Health Diagnoses** from hospitals
+- Categories: Depression, Anxiety, Bipolar Disorder, Schizophrenia, PTSD, etc.
+- **Time-series data**: Track trends over weeks, months, years
+- **Hospital information**: Multiple hospitals across different regions
+- **Patient demographics**: Age groups, gender (anonymized)
+
+### Data Sources
+- Hospital diagnostic records
+- Mental health assessment databases
+- Standardized diagnostic codes (ICD-10, DSM-5)
+
+---
+
+## 🎯 Core Features (Hackathon Requirements)
+
+### 1. Dashboard (Priority: HIGH)
+- **Overview statistics**: Total diagnoses, hospitals, categories
+- **Key charts**:
+  - Diagnoses over time (line chart)
+  - Diagnoses by category (bar chart)
+  - Distribution by hospital (pie chart)
+- **Quick insights**: Recent trends, alerts, changes
+
+### 2. Data Explorer (Priority: HIGH)
+- **Advanced filtering**:
+  - Date range selection
+  - Hospital selection (multi-select)
+  - Diagnosis category filtering
+  - Age range, gender filters
+- **Data table**: Sortable, paginated, searchable
+- **Multiple visualizations**: Switch between chart types
+- **Export functionality**: Download filtered data (CSV)
+
+### 3. Reports (Priority: MEDIUM)
+- **Report templates**: Monthly, hospital-wise, category-wise
+- **Custom report builder**: Select metrics and filters
+- **Export options**: PDF, CSV
+- **Save/load reports**: For recurring analysis
+
+### 4. Authentication (Priority: LOW - Implement LAST)
+- Simple login page
+- User roles: Admin, Researcher, Viewer
+- Session management
+
+---
+
+## 🎨 UI/UX Principles
+
+### Medical-Grade Interface
+1. **CLARITY IS KING**
+   - Clear labels on all charts
+   - Easy-to-read fonts
+   - High contrast for readability
+   - No visual clutter
+
+2. **PROFESSIONAL APPEARANCE**
+   - Medical color palette (blues, greens)
+   - Clean, minimalist design
+   - Trustworthy and authoritative look
+   - Consistent spacing and alignment
+
+3. **EASE OF USE**
+   - Intuitive navigation
+   - One-click access to key features
+   - Minimal learning curve
+   - Responsive on all devices
+
+4. **DATA FOCUS**
+   - Charts are the hero elements
+   - Filters are easily accessible
+   - Data is always readable
+   - No distracting animations
+
+---
+
+## 🏆 Success Criteria (Hackathon)
+
+### Must Have (MVP)
+- ✅ Professional, clean UI
+- ✅ Working dashboard with 3+ chart types
+- ✅ Basic filtering (date range, category)
+- ✅ Data table with sorting
+- ✅ Responsive design
+- ✅ Connected to backend/database
+- ✅ Deployed and accessible via URL
+
+### Nice to Have
+- Reports generation
+- Advanced filtering
+- Data export (CSV/PDF)
+- Multiple chart views
+- User authentication
+
+### Judging Criteria
+1. **Functionality**: Does it work? Are features complete?
+2. **UI/UX**: Is it easy for doctors to use?
+3. **Code Quality**: Clean, maintainable code?
+4. **Innovation**: Unique features or approach?
+5. **Presentation**: Can you demo it effectively?
+
+---
+
+## 🚀 Development Priorities
+
+### Phase 1: Foundation (DONE ✅)
+- Project structure
+- Routing setup
+- Layout components (sidebar, header)
+- Basic pages
+
+### Phase 2: Visualization (CURRENT 🔄)
+- Implement chart components (Recharts)
+- Connect to backend API
+- Display real data
+- Basic filtering
+
+### Phase 3: Data Exploration
+- Advanced filters
+- Data table with sorting/pagination
+- Search functionality
+- Export data
+
+### Phase 4: Polish & Deploy
+- Error handling
+- Loading states
+- Performance optimization
+- Deployment
+- Demo preparation
+
+### Phase 5: Nice to Have (If Time)
+- Reports generation
+- Authentication
+- Advanced features
+
+---
+
+## 💡 Key Insights for AI Assistants
+
+### When Writing Code
+- **Think like a doctor**: Would a doctor understand this UI?
+- **Prioritize clarity**: Clear labels > fancy animations
+- **Handle errors gracefully**: Medical data is sensitive
+- **Make it fast**: Doctors don't have time to wait
+- **Test thoroughly**: Medical tools must be reliable
+
+### When Making UI Decisions
+- **Professional over trendy**: This is for hospitals
+- **Accessible colors**: Colorblind-friendly palette
+- **Readable fonts**: Larger, clear text
+- **Whitespace**: Don't cram too much information
+- **Consistent**: Same patterns throughout
+
+### When Implementing Features
+- **Start simple**: Get core functionality working first
+- **Add complexity gradually**: Don't over-engineer
+- **Test with real use cases**: How would a doctor use this?
+- **Document clearly**: Others need to understand your code
+
+---
+
+## 📝 Remember
+
+**This application will be used by medical professionals to make important decisions about mental health care. Every feature should be designed with clarity, reliability, and ease of use in mind.**
+
+**In a hackathon setting: FOCUS ON CORE FEATURES. Get visualizations working first. Make it beautiful. Make it easy. Make it work.**
+

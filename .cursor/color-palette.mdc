@@ -1,0 +1,230 @@
+---
+alwaysApply: true
+---
+### Success - Health Green
+```css
+#059669
+```
+**Usage:**
+- Positive metrics (increases, improvements)
+- Success messages and alerts
+- Completed actions
+- Healthy status indicators
+- Positive trend indicators
+
+**CSS Classes:**
+- `text-success` / `text-green-600`
+- `bg-success` / `bg-green-600`
+- `border-success` / `border-green-600`
+
+---
+
+### Warning - Attention Orange
+```css
+#D97706
+```
+**Usage:**
+- Warning messages and alerts
+- Attention-required indicators
+- Moderate risk levels
+- Pending actions
+- Important notices
+
+**CSS Classes:**
+- `text-warning` / `text-orange-600`
+- `bg-warning` / `bg-orange-600`
+- `border-warning` / `border-orange-600`
+
+---
+
+### Error - Critical Red
+```css
+#DC2626
+```
+**Usage:**
+- Error messages and alerts
+- Critical issues
+- High-risk indicators
+- Failed actions
+- Destructive actions (delete, remove)
+- Negative trends
+
+**CSS Classes:**
+- `text-error` / `text-red-600`
+- `bg-error` / `bg-red-600`
+- `border-error` / `border-red-600`
+
+---
+
+## Neutral Colors
+
+### Background - Clean White/Light
+```css
+Primary:   #FFFFFF (Pure white)
+Secondary: #F8FAFC (Slight blue-gray tint)
+```
+**Usage:**
+- Page backgrounds
+- Card backgrounds
+- Input backgrounds
+- Content areas
+
+**CSS Classes:**
+- `bg-white` / `bg-background`
+- `bg-slate-50`
+
+---
+
+### Text - Dark Blue-Gray
+```css
+Primary:   #0F172A (Almost black, slight blue tint)
+Secondary: #475569 (Medium gray for secondary text)
+```
+**Usage:**
+- Primary text: #0F172A
+- Secondary text, descriptions: #475569
+- Disabled text: lighter variants
+
+**CSS Classes:**
+- `text-slate-900` (primary)
+- `text-slate-600` (secondary)
+- `text-muted-foreground`
+
+---
+
+### Border - Light Gray
+```css
+#E2E8F0
+```
+**Usage:**
+- Card borders
+- Dividers
+- Input borders
+- Table borders
+- Separators
+
+**CSS Classes:**
+- `border-slate-200`
+- `border`
+
+---
+
+## Usage Guidelines
+
+### Do's ✅
+- Use PRIMARY for main actions and brand elements
+- Use SUCCESS for positive metrics and confirmations
+- Use WARNING for cautionary information
+- Use ERROR for critical issues and errors
+- Maintain high contrast for readability
+- Use neutral colors for backgrounds and text
+
+### Don'ts ❌
+- Don't use bright, saturated colors (not professional)
+- Don't use too many colors at once
+- Don't use low contrast combinations
+- Don't use red/green only to convey information (colorblind users)
+- Don't override the medical aesthetic with playful colors
+
+---
+
+## Chart Colors
+
+### Recommended Chart Palette
+For data visualizations, use these colors in order:
+
+1. **Primary**: #0C4A6E (Dark blue)
+2. **Teal**: #0891B2 (Complementary blue)
+3. **Green**: #059669 (Success green)
+4. **Purple**: #7C3AED (Accent)
+5. **Orange**: #D97706 (Warning orange)
+6. **Pink**: #DB2777 (Accent 2)
+7. **Yellow**: #CA8A04 (Caution)
+8. **Red**: #DC2626 (Error red - use sparingly)
+
+**For Category Charts:**
+- Use distinct colors from the palette
+- Maintain consistent color per category
+- Ensure good contrast between adjacent colors
+
+**For Time Series:**
+- Use 2-3 colors maximum
+- Primary blue for main line
+- Green for positive comparisons
+- Orange for attention areas
+
+---
+
+## Accessibility
+
+### Contrast Ratios
+All color combinations meet WCAG AA standards:
+- Text on white: 4.5:1 minimum
+- Large text on white: 3:1 minimum
+- Interactive elements: Clear visual distinction
+
+### Colorblind Considerations
+- Never use color alone to convey information
+- Add icons or patterns to charts
+- Use labels and text annotations
+- Test with colorblind simulators
+
+---
+
+## Implementation
+
+### In Tailwind Config
+```javascript
+theme: {
+  extend: {
+    colors: {
+      primary: '#0C4A6E',
+      success: '#059669',
+      warning: '#D97706',
+      error: '#DC2626',
+      background: '#FFFFFF',
+      'background-secondary': '#F8FAFC',
+      foreground: '#0F172A',
+      'muted-foreground': '#475569',
+      border: '#E2E8F0',
+    }
+  }
+}
+```
+
+### In Components
+```tsx
+// Buttons
+<Button className="bg-primary text-white">Primary Action</Button>
+<Button variant="outline" className="border-primary text-primary">Secondary</Button>
+
+// Alerts
+<Alert className="bg-success/10 border-success text-success">Success message</Alert>
+<Alert className="bg-warning/10 border-warning text-warning">Warning message</Alert>
+<Alert className="bg-error/10 border-error text-error">Error message</Alert>
+
+// Stats Cards
+<div className="text-success">+12% increase</div>
+<div className="text-error">-5% decrease</div>
+```
+
+---
+
+## Quick Reference
+
+| Element | Color | Hex | Usage |
+|---------|-------|-----|-------|
+| Primary Action | Dark Blue | #0C4A6E | Buttons, links, brand |
+| Success/Positive | Green | #059669 | Good news, increases |
+| Warning/Caution | Orange | #D97706 | Warnings, attention |
+| Error/Critical | Red | #DC2626 | Errors, problems |
+| Background | White | #FFFFFF | Page background |
+| Background Alt | Light Gray | #F8FAFC | Card background |
+| Text Primary | Dark Blue-Gray | #0F172A | Main text |
+| Text Secondary | Gray | #475569 | Descriptions |
+| Border | Light Gray | #E2E8F0 | Borders, dividers |
+
+---
+
+**Remember: This is a medical application. The color palette should convey professionalism, trust, and clarity above all else.**
+

@@ -1,0 +1,324 @@
+---
+alwaysApply: true
+---
+
+# Mental Health Data Visualizer - Cursor Rules
+
+## Project Context
+
+You are working on a **Mental Health Data Visualizer** application for a hackathon. This is a web application designed to help medical professionals (doctors, researchers, psychiatrists) easily visualize and analyze hospital mental health diagnostic data.
+
+### Core Objective
+Make it EXTREMELY EASY for doctors and medical researchers to:
+- Visualize mental health diagnostic data
+- Filter and explore patient diagnoses
+- Generate reports for medical research
+- Understand trends and patterns in mental health diagnoses
+
+### Target Users
+- Medical doctors
+- Mental health researchers
+- Hospital administrators
+- Healthcare data analysts
+
+### Technology Stack
+**Frontend:**
+- React 19 + TypeScript
+- Vite (build tool)
+- Tailwind CSS (styling)
+- Shadcn UI (component library)
+- Recharts (data visualization)
+- React Router (navigation)
+- Axios (API calls)
+- Lucide React (icons)
+
+**Backend:** (To be connected)
+- Will connect to database with mental health diagnostic data
+- API endpoints for data fetching and filtering
+
+### Project Structure
+```
+frontend/
+├── src/
+│   ├── components/       # Reusable UI components
+│   │   ├── ui/          # Shadcn UI components
+│   │   ├── charts/      # Chart components (Recharts)
+│   │   ├── filters/     # Filter components
+│   │   ├── layout/      # Layout (Header, Sidebar, MainLayout)
+│   │   └── common/      # Common components
+│   ├── pages/           # Page components
+│   │   ├── Dashboard/   # Main dashboard
+│   │   ├── DataExplorer/ # Advanced data exploration
+│   │   ├── Reports/     # Report generation
+│   │   └── Login/       # Authentication (later)
+│   ├── services/        # API services
+│   ├── hooks/           # Custom React hooks
+│   ├── types/           # TypeScript definitions
+│   ├── context/         # Global state management
+│   ├── constants/       # Application constants
+│   └── router.tsx       # React Router configuration
+```
+
+### Key Features (Hackathon Requirements)
+1. **Data Visualization** - Multiple chart types (bar, line, pie)
+2. **Data Filtering** - Date range, hospital, diagnosis category
+3. **Data Exploration** - Searchable, sortable data tables
+4. **Reports Generation** - Exportable reports (CSV, PDF)
+5. **Responsive Design** - Works on desktop, tablet, mobile
+6. **Professional UI** - Clean, medical-grade interface
+
+### Medical Context
+- Data contains PRIMARY mental health diagnoses
+- Includes: Depression, Anxiety, Bipolar Disorder, Schizophrenia, etc.
+- Hospital-based diagnostic records
+- Time-series data for trend analysis
+- Multiple hospitals across regions
+
+## Development Guidelines
+
+### Code Style
+- Use TypeScript for all new files
+- Use functional components with hooks
+- Follow React best practices
+- Use Tailwind CSS for styling (utility-first)
+- Use Shadcn UI components when available
+- Keep components small and focused
+
+### Import Guidelines
+- Use `@/` alias for src imports: `import { Button } from '@/components/ui/button'`
+- Group imports: React → External libs → Internal components → Types → Styles
+
+### Component Guidelines
+- One component per file
+- Export as default at the end
+- Use descriptive prop names
+- Add JSDoc comments for complex components
+- Always handle loading and error states
+
+### API Integration
+- All API calls through services (`src/services/`)
+- Use custom hooks for data fetching (`src/hooks/`)
+- Handle loading, error, and empty states
+- Show user-friendly error messages
+
+### Accessibility
+- Use semantic HTML
+- Include ARIA labels for interactive elements
+- Ensure keyboard navigation works
+- Maintain good color contrast (medical grade)
+
+### Performance
+- Lazy load routes when possible
+- Optimize chart rendering
+- Use React.memo for expensive components
+- Debounce search and filter inputs
+
+## Important Notes
+
+### Hackathon Context
+- Focus on CORE FEATURES first (visualizations + filters)
+- Clean, professional UI is crucial (medical context)
+- Authentication is LAST priority (implement at the end)
+- Prioritize data clarity and usability for doctors
+
+### Medical UI Requirements
+- CLEAN and PROFESSIONAL design
+- Easy to read charts and data
+- Clear data labels and legends
+- Color-coded for quick understanding
+- Minimal distractions, focus on data
+- Accessible color palette (colorblind-friendly)
+
+### What NOT to Do
+- Don't overcomplicate the UI
+- Don't add features not requested
+- Don't skip error handling
+- Don't use placeholder data without marking it
+- Don't commit without testing
+- Don't break existing functionality
+
+## Current Status
+- ✅ Folder structure organized
+- ✅ Shadcn sidebar implemented
+- ✅ React Router configured
+- ✅ All pages created (Dashboard, DataExplorer, Reports, Login)
+- ✅ Professional medical color palette applied
+- ⏳ Pending: Backend API integration
+- ⏳ Pending: Chart implementations
+- ⏳ Pending: Filter implementations
+- ⏳ Pending: Data table implementation
+
+## Quick Commands
+```bash
+# Development
+npm run dev          # Start dev server (localhost:5173)
+npm run build        # Build for production
+npm run lint         # Run linter
+
+# Add Shadcn Components
+npx shadcn@latest add [component-name]
+```
+
+## Remember
+**This is for DOCTORS to analyze MENTAL HEALTH DATA. Keep it simple, clear, and professional!**
+
+# Mental Health Data Visualizer - Cursor Rules
+
+## Project Context
+
+You are working on a **Mental Health Data Visualizer** application for a hackathon. This is a web application designed to help medical professionals (doctors, researchers, psychiatrists) easily visualize and analyze hospital mental health diagnostic data.
+
+### Core Objective
+Make it EXTREMELY EASY for doctors and medical researchers to:
+- Visualize mental health diagnostic data
+- Filter and explore patient diagnoses
+- Generate reports for medical research
+- Understand trends and patterns in mental health diagnoses
+
+### Target Users
+- Medical doctors
+- Mental health researchers
+- Hospital administrators
+- Healthcare data analysts
+
+### Technology Stack
+**Frontend:**
+- React 19 + TypeScript
+- Vite (build tool)
+- Tailwind CSS (styling)
+- Shadcn UI (component library)
+- Recharts (data visualization)
+- React Router (navigation)
+- Axios (API calls)
+- Lucide React (icons)
+
+**Backend:** (To be connected)
+- Will connect to database with mental health diagnostic data
+- API endpoints for data fetching and filtering
+
+### Project Structure
+```
+frontend/
+├── src/
+│   ├── components/       # Reusable UI components
+│   │   ├── ui/          # Shadcn UI components
+│   │   ├── charts/      # Chart components (Recharts)
+│   │   ├── filters/     # Filter components
+│   │   ├── layout/      # Layout (Header, Sidebar, MainLayout)
+│   │   └── common/      # Common components
+│   ├── pages/           # Page components
+│   │   ├── Dashboard/   # Main dashboard
+│   │   ├── DataExplorer/ # Advanced data exploration
+│   │   ├── Reports/     # Report generation
+│   │   └── Login/       # Authentication (later)
+│   ├── services/        # API services
+│   ├── hooks/           # Custom React hooks
+│   ├── types/           # TypeScript definitions
+│   ├── context/         # Global state management
+│   ├── constants/       # Application constants
+│   └── router.tsx       # React Router configuration
+```
+
+### Key Features (Hackathon Requirements)
+1. **Data Visualization** - Multiple chart types (bar, line, pie)
+2. **Data Filtering** - Date range, hospital, diagnosis category
+3. **Data Exploration** - Searchable, sortable data tables
+4. **Reports Generation** - Exportable reports (CSV, PDF)
+5. **Responsive Design** - Works on desktop, tablet, mobile
+6. **Professional UI** - Clean, medical-grade interface
+
+### Medical Context
+- Data contains PRIMARY mental health diagnoses
+- Includes: Depression, Anxiety, Bipolar Disorder, Schizophrenia, etc.
+- Hospital-based diagnostic records
+- Time-series data for trend analysis
+- Multiple hospitals across regions
+
+## Development Guidelines
+
+### Code Style
+- Use TypeScript for all new files
+- Use functional components with hooks
+- Follow React best practices
+- Use Tailwind CSS for styling (utility-first)
+- Use Shadcn UI components when available
+- Keep components small and focused
+
+### Import Guidelines
+- Use `@/` alias for src imports: `import { Button } from '@/components/ui/button'`
+- Group imports: React → External libs → Internal components → Types → Styles
+
+### Component Guidelines
+- One component per file
+- Export as default at the end
+- Use descriptive prop names
+- Add JSDoc comments for complex components
+- Always handle loading and error states
+
+### API Integration
+- All API calls through services (`src/services/`)
+- Use custom hooks for data fetching (`src/hooks/`)
+- Handle loading, error, and empty states
+- Show user-friendly error messages
+
+### Accessibility
+- Use semantic HTML
+- Include ARIA labels for interactive elements
+- Ensure keyboard navigation works
+- Maintain good color contrast (medical grade)
+
+### Performance
+- Lazy load routes when possible
+- Optimize chart rendering
+- Use React.memo for expensive components
+- Debounce search and filter inputs
+
+## Important Notes
+
+### Hackathon Context
+- Focus on CORE FEATURES first (visualizations + filters)
+- Clean, professional UI is crucial (medical context)
+- Authentication is LAST priority (implement at the end)
+- Prioritize data clarity and usability for doctors
+
+### Medical UI Requirements
+- CLEAN and PROFESSIONAL design
+- Easy to read charts and data
+- Clear data labels and legends
+- Color-coded for quick understanding
+- Minimal distractions, focus on data
+- Accessible color palette (colorblind-friendly)
+
+### What NOT to Do
+- Don't overcomplicate the UI
+- Don't add features not requested
+- Don't skip error handling
+- Don't use placeholder data without marking it
+- Don't commit without testing
+- Don't break existing functionality
+
+## Current Status
+- ✅ Folder structure organized
+- ✅ Shadcn sidebar implemented
+- ✅ React Router configured
+- ✅ All pages created (Dashboard, DataExplorer, Reports, Login)
+- ✅ Professional medical color palette applied
+- ⏳ Pending: Backend API integration
+- ⏳ Pending: Chart implementations
+- ⏳ Pending: Filter implementations
+- ⏳ Pending: Data table implementation
+
+## Quick Commands
+```bash
+# Development
+npm run dev          # Start dev server (localhost:5173)
+npm run build        # Build for production
+npm run lint         # Run linter
+
+# Add Shadcn Components
+npx shadcn@latest add [component-name]
+```
+
+## Remember
+**This is for DOCTORS to analyze MENTAL HEALTH DATA. Keep it simple, clear, and professional!**
+
