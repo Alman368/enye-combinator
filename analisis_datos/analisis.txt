@@ -1,0 +1,739 @@
+================================================================================
+ANÁLISIS EXPLORATORIO DE DATOS - SALUD MENTAL
+================================================================================
+
+1. INFORMACIÓN GENERAL DEL DATASET
+--------------------------------------------------------------------------------
+Número de registros: 21210
+Número de columnas: 111
+
+2. LISTA DE COLUMNAS
+--------------------------------------------------------------------------------
+1. Comunidad Autónoma
+2. Nombre
+3. Fecha de nacimiento
+4. Sexo
+5. CCAA Residencia
+6. Fecha de Ingreso
+7. Circunstancia de Contacto
+8. Fecha de Fin Contacto
+9. Tipo Alta
+10. Estancia Días
+11. Diagnóstico Principal
+12. Categoría
+13. Diagnóstico 2
+14. Diagnóstico 3
+15. Diagnóstico 4
+16. Diagnóstico 5
+17. Diagnóstico 6
+18. Diagnóstico 7
+19. Diagnóstico 8
+20. Diagnóstico 9
+21. Diagnóstico 10
+22. Diagnóstico 11
+23. Diagnóstico 12
+24. Diagnóstico 13
+25. Diagnóstico 14
+26. Fecha de Intervención
+27. Procedimiento 1
+28. Procedimiento 2
+29. Procedimiento 3
+30. Procedimiento 4
+31. Procedimiento 5
+32. Procedimiento 6
+33. Procedimiento 7
+34. Procedimiento 8
+35. Procedimiento 9
+36. Procedimiento 10
+37. Procedimiento 11
+38. Procedimiento 12
+39. Procedimiento 13
+40. Procedimiento 14
+41. Procedimiento 15
+42. Procedimiento 16
+43. Procedimiento 17
+44. Procedimiento 18
+45. Procedimiento 19
+46. Procedimiento 20
+47. GDR AP
+48. CDM AP
+49. Tipo GDR AP
+50. Valor Peso Español
+51. GRD APR
+52. CDM APR
+53. Tipo GDR APR
+54. Valor Peso Americano APR
+55. Nivel Severidad APR
+56. Riesgo Mortalidad APR
+57. Servicio
+58. Edad
+59. Reingreso
+60. Coste APR
+61. GDR IR
+62. Tipo GDR IR
+63. Tipo PROCESO IR
+64. CIE
+65. Número de registro anual
+66. Centro Recodificado
+67. CIP SNS Recodificado
+68. País Nacimiento
+69. País Residencia
+70. Fecha de Inicio contacto
+71. Régimen Financiación
+72. Procedencia
+73. Continuidad Asistencial
+74. Ingreso en UCI
+75. Días UCI
+76. Diagnóstico 15
+77. Diagnóstico 16
+78. Diagnóstico 17
+79. Diagnóstico 18
+80. Diagnóstico 19
+81. Diagnóstico 20
+82. POA Diagnóstico Principal
+83. POA Diagnóstico 2
+84. POA Diagnóstico 3
+85. POA Diagnóstico 4
+86. POA Diagnóstico 5
+87. POA Diagnóstico 6
+88. POA Diagnóstico 7
+89. POA Diagnóstico 8
+90. POA Diagnóstico 9
+91. POA Diagnóstico 10
+92. POA Diagnóstico 11
+93. POA Diagnóstico 12
+94. POA Diagnóstico 13
+95. POA Diagnóstico 14
+96. POA Diagnóstico 15
+97. POA Diagnóstico 16
+98. POA Diagnóstico 17
+99. POA Diagnóstico 18
+100. POA Diagnóstico 19
+101. POA Diagnóstico 20
+102. Procedimiento Externo 1
+103. Procedimiento Externo 2
+104. Procedimiento Externo 3
+105. Procedimiento Externo 4
+106. Procedimiento Externo 5
+107. Procedimiento Externo 6
+108. Tipo GRD APR
+109. Peso Español APR
+110. Edad en Ingreso
+111. Mes de Ingreso
+
+3. VALORES NULOS POR COLUMNA
+--------------------------------------------------------------------------------
+                 Columna  Valores Nulos  Porcentaje
+         CCAA Residencia          21210  100.000000
+ Procedimiento Externo 6          21210  100.000000
+ Procedimiento Externo 4          21210  100.000000
+ Procedimiento Externo 5          21210  100.000000
+                  CDM AP          21210  100.000000
+             Tipo GDR AP          21210  100.000000
+         Tipo PROCESO IR          21210  100.000000
+             Tipo GDR IR          21210  100.000000
+                  GDR AP          21210  100.000000
+                  GDR IR          21210  100.000000
+               Reingreso          21210  100.000000
+Valor Peso Americano APR          21210  100.000000
+            Tipo GDR APR          21210  100.000000
+      Valor Peso Español          21210  100.000000
+ Procedimiento Externo 3          21209   99.995285
+ Procedimiento Externo 2          21209   99.995285
+        Procedimiento 20          21209   99.995285
+        Procedimiento 19          21209   99.995285
+        Procedimiento 17          21208   99.990570
+        Procedimiento 16          21208   99.990570
+        Procedimiento 18          21208   99.990570
+        Procedimiento 14          21207   99.985856
+ Procedimiento Externo 1          21207   99.985856
+        Procedimiento 15          21207   99.985856
+        Procedimiento 13          21205   99.976426
+      POA Diagnóstico 20          21200   99.952852
+          Diagnóstico 20          21200   99.952852
+        Procedimiento 12          21199   99.948138
+        Procedimiento 11          21194   99.924564
+          Diagnóstico 19          21191   99.910420
+      POA Diagnóstico 19          21191   99.910420
+        Procedimiento 10          21186   99.886846
+      POA Diagnóstico 18          21185   99.882131
+          Diagnóstico 18          21185   99.882131
+         Procedimiento 9          21173   99.825554
+      POA Diagnóstico 17          21168   99.801980
+          Diagnóstico 17          21168   99.801980
+         Procedimiento 8          21157   99.750118
+      POA Diagnóstico 16          21144   99.688826
+          Diagnóstico 16          21144   99.688826
+         Procedimiento 7          21140   99.669967
+          Diagnóstico 15          21119   99.570957
+      POA Diagnóstico 15          21119   99.570957
+                Días UCI          21110   99.528524
+         Procedimiento 6          21108   99.519095
+   Fecha de Intervención          21069   99.335219
+          Diagnóstico 14          21065   99.316360
+      POA Diagnóstico 14          21065   99.316360
+         Procedimiento 5          21017   99.090052
+          Diagnóstico 13          20969   98.863744
+      POA Diagnóstico 13          20969   98.863744
+      POA Diagnóstico 12          20807   98.099953
+          Diagnóstico 12          20807   98.099953
+         Procedimiento 4          20766   97.906648
+      POA Diagnóstico 11          20542   96.850542
+          Diagnóstico 11          20542   96.850542
+          Diagnóstico 10          20205   95.261669
+      POA Diagnóstico 10          20205   95.261669
+         Procedimiento 3          20136   94.936351
+       POA Diagnóstico 9          19593   92.376238
+           Diagnóstico 9          19593   92.376238
+           Diagnóstico 8          18686   88.099953
+       POA Diagnóstico 8          18686   88.099953
+         Procedimiento 2          18482   87.138142
+       POA Diagnóstico 7          17375   81.918906
+           Diagnóstico 7          17375   81.918906
+         Procedimiento 1          16590   78.217822
+           Diagnóstico 6          15447   72.828854
+       POA Diagnóstico 6          15447   72.828854
+           Diagnóstico 5          12864   60.650636
+       POA Diagnóstico 5          12864   60.650636
+       POA Diagnóstico 4           9729   45.869873
+           Diagnóstico 4           9729   45.869873
+           Diagnóstico 3           6150   28.995757
+       POA Diagnóstico 3           6150   28.995757
+           Diagnóstico 2           2604   12.277228
+       POA Diagnóstico 2           2604   12.277228
+    CIP SNS Recodificado            849    4.002829
+
+4. ELIMINAR COLUMNAS SIN NINGÚN DATO VÁLIDO
+--------------------------------------------------------------------------------
+✅ Columnas eliminadas: ['CCAA Residencia', 'GDR AP', 'CDM AP', 'Tipo GDR AP', 'Valor Peso Español', 'Tipo GDR APR', 'Valor Peso Americano APR', 'Reingreso', 'GDR IR', 'Tipo GDR IR', 'Tipo PROCESO IR', 'Procedimiento Externo 4', 'Procedimiento Externo 5', 'Procedimiento Externo 6']
+📊 Número de columnas restante: 97
+
+5. TIPOS DE DATOS
+--------------------------------------------------------------------------------
+0. Comunidad Autónoma: [<class 'str'>]
+1. Nombre: [<class 'str'>]
+2. Fecha de nacimiento: [<class 'pandas._libs.tslibs.timestamps.Timestamp'>]
+3. Sexo: [<class 'int'>]
+4. Fecha de Ingreso: [<class 'pandas._libs.tslibs.timestamps.Timestamp'>]
+5. Circunstancia de Contacto: [<class 'int'>]
+6. Fecha de Fin Contacto: [<class 'str'>]
+7. Tipo Alta: [<class 'int'>]
+8. Estancia Días: [<class 'int'>]
+9. Diagnóstico Principal: [<class 'str'>]
+10. Categoría: [<class 'str'>]
+11. Diagnóstico 2: [<class 'str'> <class 'float'>]
+12. Diagnóstico 3: [<class 'str'> <class 'float'>]
+13. Diagnóstico 4: [<class 'float'> <class 'str'>]
+14. Diagnóstico 5: [<class 'float'> <class 'str'>]
+15. Diagnóstico 6: [<class 'float'> <class 'str'>]
+16. Diagnóstico 7: [<class 'float'> <class 'str'>]
+17. Diagnóstico 8: [<class 'float'> <class 'str'>]
+18. Diagnóstico 9: [<class 'float'> <class 'str'>]
+19. Diagnóstico 10: [<class 'float'> <class 'str'>]
+20. Diagnóstico 11: [<class 'float'> <class 'str'>]
+21. Diagnóstico 12: [<class 'float'> <class 'str'>]
+22. Diagnóstico 13: [<class 'float'> <class 'str'>]
+23. Diagnóstico 14: [<class 'float'> <class 'str'>]
+24. Fecha de Intervención: [<class 'float'> <class 'str'>]
+25. Procedimiento 1: [<class 'float'> <class 'str'>]
+26. Procedimiento 2: [<class 'float'> <class 'str'>]
+27. Procedimiento 3: [<class 'float'> <class 'str'>]
+28. Procedimiento 4: [<class 'float'> <class 'str'>]
+29. Procedimiento 5: [<class 'float'> <class 'str'>]
+30. Procedimiento 6: [<class 'float'> <class 'str'>]
+31. Procedimiento 7: [<class 'float'> <class 'str'>]
+32. Procedimiento 8: [<class 'float'> <class 'str'>]
+33. Procedimiento 9: [<class 'float'> <class 'str'>]
+34. Procedimiento 10: [<class 'float'> <class 'str'>]
+35. Procedimiento 11: [<class 'float'> <class 'str'>]
+36. Procedimiento 12: [<class 'float'> <class 'str'>]
+37. Procedimiento 13: [<class 'float'> <class 'str'>]
+38. Procedimiento 14: [<class 'float'> <class 'str'>]
+39. Procedimiento 15: [<class 'float'> <class 'str'>]
+40. Procedimiento 16: [<class 'float'> <class 'str'>]
+41. Procedimiento 17: [<class 'float'> <class 'str'>]
+42. Procedimiento 18: [<class 'float'> <class 'str'>]
+43. Procedimiento 19: [<class 'float'> <class 'str'>]
+44. Procedimiento 20: [<class 'float'> <class 'str'>]
+45. GRD APR: [<class 'int'>]
+46. CDM APR: [<class 'int'>]
+47. Nivel Severidad APR: [<class 'int'>]
+48. Riesgo Mortalidad APR: [<class 'int'>]
+49. Servicio: [<class 'str'>]
+50. Edad: [<class 'int'>]
+51. Coste APR: [<class 'int'>]
+52. CIE: [<class 'int'>]
+53. Número de registro anual: [<class 'float'>]
+54. Centro Recodificado: [<class 'int'> <class 'str'>]
+55. CIP SNS Recodificado: [<class 'str'> <class 'int'> <class 'float'>]
+56. País Nacimiento: [<class 'int'> <class 'str'>]
+57. País Residencia: [<class 'int'> <class 'str'>]
+58. Fecha de Inicio contacto: [<class 'str'>]
+59. Régimen Financiación: [<class 'float'>]
+60. Procedencia: [<class 'float'>]
+61. Continuidad Asistencial: [<class 'float'>]
+62. Ingreso en UCI: [<class 'float'>]
+63. Días UCI: [<class 'float'>]
+64. Diagnóstico 15: [<class 'float'> <class 'str'>]
+65. Diagnóstico 16: [<class 'float'> <class 'str'>]
+66. Diagnóstico 17: [<class 'float'> <class 'str'>]
+67. Diagnóstico 18: [<class 'float'> <class 'str'>]
+68. Diagnóstico 19: [<class 'float'> <class 'str'>]
+69. Diagnóstico 20: [<class 'float'> <class 'str'>]
+70. POA Diagnóstico Principal: [<class 'str'>]
+71. POA Diagnóstico 2: [<class 'str'> <class 'float'>]
+72. POA Diagnóstico 3: [<class 'str'> <class 'float'>]
+73. POA Diagnóstico 4: [<class 'float'> <class 'str'>]
+74. POA Diagnóstico 5: [<class 'float'> <class 'str'>]
+75. POA Diagnóstico 6: [<class 'float'> <class 'str'>]
+76. POA Diagnóstico 7: [<class 'float'> <class 'str'>]
+77. POA Diagnóstico 8: [<class 'float'> <class 'str'>]
+78. POA Diagnóstico 9: [<class 'float'> <class 'str'>]
+79. POA Diagnóstico 10: [<class 'float'> <class 'str'>]
+80. POA Diagnóstico 11: [<class 'float'> <class 'str'>]
+81. POA Diagnóstico 12: [<class 'float'> <class 'str'>]
+82. POA Diagnóstico 13: [<class 'float'> <class 'str'>]
+83. POA Diagnóstico 14: [<class 'float'> <class 'str'>]
+84. POA Diagnóstico 15: [<class 'float'> <class 'str'>]
+85. POA Diagnóstico 16: [<class 'float'> <class 'str'>]
+86. POA Diagnóstico 17: [<class 'float'> <class 'str'>]
+87. POA Diagnóstico 18: [<class 'float'> <class 'str'>]
+88. POA Diagnóstico 19: [<class 'float'> <class 'str'>]
+89. POA Diagnóstico 20: [<class 'float'> <class 'str'>]
+90. Procedimiento Externo 1: [<class 'float'> <class 'str'>]
+91. Procedimiento Externo 2: [<class 'float'> <class 'str'>]
+92. Procedimiento Externo 3: [<class 'float'> <class 'str'>]
+93. Tipo GRD APR: [<class 'str'>]
+94. Peso Español APR: [<class 'float'>]
+95. Edad en Ingreso: [<class 'int'>]
+96. Mes de Ingreso: [<class 'str'>]
+
+6. ESTADÍSTICAS DESCRIPTIVAS - COLUMNAS NUMÉRICAS
+--------------------------------------------------------------------------------
+                 Fecha de nacimiento          Sexo               Fecha de Ingreso  Circunstancia de Contacto     Tipo Alta  Estancia Días       GRD APR       CDM APR  Nivel Severidad APR  Riesgo Mortalidad APR          Edad     Coste APR      CIE  Número de registro anual  Régimen Financiación   Procedencia  Continuidad Asistencial  Ingreso en UCI    Días UCI  Peso Español APR  Edad en Ingreso
+count                          21210  21210.000000                          21210               21210.000000  21210.000000   21210.000000  21210.000000  21210.000000         21210.000000           21210.000000  21210.000000  21210.000000  21210.0              2.121000e+04          21210.000000  21210.000000             21210.000000    21210.000000  100.000000      21210.000000     21210.000000
+mean   1973-05-14 00:29:19.773691648      1.451108  2017-07-04 15:19:52.531824640                   1.104715      1.262706      15.459500    751.342999     18.991372             1.535974               1.057001     43.644837   5453.106554     10.0              9.263254e+06              1.070297     22.031730                 8.409147        2.119708    3.510000          1.196840        43.675625
+min              1921-03-07 00:00:00      1.000000            2016-01-01 00:00:00                   1.000000      1.000000       0.000000      4.000000      0.000000             1.000000               1.000000      0.000000   1496.000000     10.0              1.763000e+04              1.000000     21.000000                 1.000000        1.000000    0.000000          0.329811         0.000000
+25%              1963-09-23 00:00:00      1.000000            2016-10-02 00:00:00                   1.000000      1.000000       5.000000    750.000000     19.000000             1.000000               1.000000     34.000000   4228.000000     10.0              5.624386e+06              1.000000     21.000000                 9.000000        2.000000    1.000000          0.925525        34.000000
+50%              1973-03-03 00:00:00      1.000000            2017-06-30 00:00:00                   1.000000      1.000000      11.000000    752.000000     19.000000             1.000000               1.000000     44.000000   5988.000000     10.0              8.672260e+06              1.000000     21.000000                 9.000000        2.000000    2.000000          1.316269        44.000000
+75%              1983-04-20 00:00:00      2.000000            2018-04-13 00:00:00                   1.000000      1.000000      19.000000    753.000000     19.000000             2.000000               1.000000     53.000000   6319.000000     10.0              1.518998e+07              1.000000     21.000000                 9.000000        2.000000    3.000000          1.392961        53.000000
+max              2018-09-19 00:00:00      9.000000            2018-12-31 00:00:00                   2.000000      9.000000     814.000000    952.000000     24.000000             4.000000               4.000000     96.000000  70601.000000     10.0              1.632872e+07              9.000000     90.000000                 9.000000        9.000000   38.000000         15.517939        96.000000
+std                              NaN      0.560028                            NaN                   0.306193      1.074573      19.881648     33.577787      0.954612             0.583499               0.275185     14.107579   1561.748400      0.0              4.702400e+06              0.683705      5.127447                 2.084040        0.928107    5.520385          0.341538        14.118468
+
+7. VALORES ÚNICOS
+--------------------------------------------------------------------------------
+
+Comunidad Autónoma: 2 valores únicos
+  Valores: ['ANDALUCÍA' 'LA RIOJA']
+
+Nombre: 12455 valores únicos
+  Primeros 10 valores: ['MONICA TINEO RODRIGUEZ' 'IRENE RODRIGUEZ HERNANDEZ'
+ 'JOSE MORILLO GONZALEZ' 'ELIZABETH MARTIN GUTIERREZ'
+ 'MARIA ENCARNACION VEGA GARCIA' 'ANTONIO BAUTISTA NAVARRO'
+ 'ANA ISABEL CABRERA CONTRERAS' 'NEREA VAZQUEZ RODRIGUEZ'
+ 'ALVARO ROSA TORRES' 'REMEDIOS HUERTAS JIMENEZ']
+
+Fecha de nacimiento: 9302 valores únicos
+  Primeros 10 valores: <DatetimeArray>
+['1951-08-17 00:00:00', '1929-03-20 00:00:00', '1976-11-25 00:00:00',
+ '1976-11-10 00:00:00', '1977-04-28 00:00:00', '1986-01-19 00:00:00',
+ '1995-10-06 00:00:00', '1964-04-22 00:00:00', '1966-10-06 00:00:00',
+ '1987-01-22 00:00:00']
+Length: 10, dtype: datetime64[ns]
+
+Sexo: 3 valores únicos
+  Valores: [2 1 9]
+
+Fecha de Ingreso: 1096 valores únicos
+  Primeros 10 valores: <DatetimeArray>
+['2016-01-01 00:00:00', '2016-01-02 00:00:00', '2016-01-03 00:00:00',
+ '2016-01-04 00:00:00', '2016-01-05 00:00:00', '2016-01-06 00:00:00',
+ '2016-01-07 00:00:00', '2016-01-08 00:00:00', '2016-01-09 00:00:00',
+ '2016-01-10 00:00:00']
+Length: 10, dtype: datetime64[ns]
+
+Circunstancia de Contacto: 2 valores únicos
+  Valores: [1 2]
+
+Fecha de Fin Contacto: 1133 valores únicos
+  Primeros 10 valores: ['08/01/2016' '11/01/2016' '27/01/2016' '18/01/2016' '27/02/2016'
+ '04/01/2016' '20/01/2016' '25/01/2016' '02/01/2016' '05/01/2016']
+
+Tipo Alta: 7 valores únicos
+  Valores: [1 3 5 2 4 9 8]
+
+Estancia Días: 175 valores únicos
+  Primeros 10 valores: [ 7 10 26 17 57  3 19 24  1  5]
+
+Diagnóstico Principal: 263 valores únicos
+  Primeros 10 valores: ['F25.0' 'F41.9' 'F60.2' 'F20.0' 'F60.1' 'F10.120' 'F34.1' 'F32.9' 'F29'
+ 'F60.3']
+
+Categoría: 7 valores únicos
+  Valores: ['Esquizofrenia, trastornos esquizotípicos y trastornos delirantes'
+ 'Trastornos neuróticos, trastornos relacionados con el estrés y trastornos somatomorfos'
+ 'Trastornos de la personalidad y del comportamiento en adultos'
+ 'Trastornos mentales y del comportamiento debidos al uso de sustancias psicoactivas'
+ 'Trastornos del humor [afectivos]'
+ 'Trastornos emocionales y del comportamiento que aparecen habitualmente en la niñez y en la adolescencia'
+ 'Síndromes del comportamiento asociados con alteraciones fisiológicas y factores físicos']
+
+Diagnóstico 2: 1586 valores únicos
+  Primeros 10 valores: ['Z63.79' 'I11.9' 'F19.288' 'C07' 'Z88.0' 'E66.9' 'F17.210' 'F44.81' 'I10'
+ 'F10.120']
+
+Diagnóstico 3: 1539 valores únicos
+  Primeros 10 valores: ['Z91.19' 'I35.8' nan 'F17.210' 'F50.9' 'B20' 'K44.9' 'F12.10' 'F01.51'
+ 'E66.01']
+
+Diagnóstico 4: 1470 valores únicos
+  Primeros 10 valores: [nan 'E11.9' 'F12.20' 'E87.6' 'B18.2' 'Z72.0' 'F60.9' 'I42.0' 'E78.5'
+ 'F10.10']
+
+Diagnóstico 5: 1237 valores únicos
+  Primeros 10 valores: [nan 'I87.2' 'F14.10' 'F17.210' 'R45.851' 'Z91.19' 'K58.9' 'R47.1' 'I10'
+ 'M79.7']
+
+Diagnóstico 6: 1030 valores únicos
+  Primeros 10 valores: [nan 'Z95.0' 'F10.10' 'R45.851' 'Z88.8' 'F12.10' 'Z91.14' 'F14.21' 'K44.9'
+ 'M41.9']
+
+Diagnóstico 7: 833 valores únicos
+  Primeros 10 valores: [nan 'Z63.9' 'Z79.82' 'F11.10' 'Z86.73' 'F12.21' 'K57.30' 'Z72.0' 'R19.7'
+ 'D75.89']
+
+Diagnóstico 8: 656 valores únicos
+  Primeros 10 valores: [nan 'Z86.73' 'Z56.0' 'I10' 'Z91.81' 'A67.1' 'F12.10' 'F17.200' 'Z63.72'
+ 'Z88.8']
+
+Diagnóstico 9: 518 valores únicos
+  Primeros 10 valores: [nan 'M19.90' 'Z81.8' 'F10.188' 'F10.10' 'Z56.0' 'E66.9' 'Z79.3' 'Z99.89'
+ 'R78.81']
+
+Diagnóstico 10: 388 valores únicos
+  Primeros 10 valores: [nan 'Z88.0' 'Z91.14' 'Z91.5' 'E03.9' 'D25.9' 'Z90.710' 'B96.89' 'Z63.9'
+ 'T43.595S']
+
+Diagnóstico 11: 306 valores únicos
+  Primeros 10 valores: [nan 'Z60.2' 'Z81.8' 'E11.9' 'I87.2' 'N92.1' 'J96.90' 'G21.11' 'I48.2'
+ 'Z79.4']
+
+Diagnóstico 12: 213 valores únicos
+  Primeros 10 valores: [nan 'Z79.01' 'H54.0' 'E21.0' 'E78.5' 'Q61.3' 'I10' 'K57.00' 'F15.10'
+ 'E11.9']
+
+Diagnóstico 13: 132 valores únicos
+  Primeros 10 valores: [nan 'Z79.4' 'E02' 'F05' 'E78.5' 'F11.10' 'E66.9' 'Z90.49' 'Z98.42'
+ 'Z79.82']
+
+Diagnóstico 14: 105 valores únicos
+  Primeros 10 valores: [nan 'Z86.73' 'I48.2' 'B19.20' 'M35.3' 'Z96.1' 'F44.9' 'F17.210' 'E03.9'
+ 'E78.5']
+
+Fecha de Intervención: 141 valores únicos
+  Primeros 10 valores: [nan '19012016 1817' '05022016 0000' '05022016 0845' '10022016 1000'
+ '18022016 0945' '18022016 2130' '25022016 1325' '25022016 1410'
+ '24022016 0000']
+
+Procedimiento 1: 365 valores únicos
+  Primeros 10 valores: [nan '4B02XSZ' 'GZ3ZZZZ' 'GZ14ZZZ' 'B030ZZZ' 'B246ZZZ' 'B020ZZZ' 'GZHZZZZ'
+ 'BU46ZZZ' 'BW03ZZZ']
+
+Procedimiento 2: 255 valores únicos
+  Primeros 10 valores: [nan 'B246ZZZ' 'B030ZZZ' 'BW40ZZZ' 'GZ50ZZZ' '4B0FXVZ' 'BR3FZZZ' '4A033R1'
+ 'GZ3ZZZZ' 'GZ72ZZZ']
+
+Procedimiento 3: 177 valores únicos
+  Primeros 10 valores: [nan '4A02X4Z' '4B01XVZ' 'GZ56ZZZ' 'B020ZZZ' 'B34KZZ3' 'GZ50ZZZ' 'BW38ZZZ'
+ 'B030ZZZ' 'B345ZZZ']
+
+Procedimiento 4: 122 valores únicos
+  Primeros 10 valores: [nan 'BW03ZZZ' '4A00X4Z' 'B348ZZZ' 'GZ56ZZZ' 'BR39ZZZ' 'BW24ZZZ' 'GZB4ZZZ'
+ 'GZ72ZZZ' 'GZHZZZZ']
+
+Procedimiento 5: 74 valores únicos
+  Primeros 10 valores: [nan 'BT43ZZZ' 'B33RZZZ' '4A07X0Z' 'GZB4ZZZ' 'F08Z6ZZ' 'GZ72ZZZ' '0UQG0ZZ'
+ 'B345ZZZ' '0WQN0ZZ']
+
+Procedimiento 6: 47 valores únicos
+  Primeros 10 valores: [nan 'GZB4ZZZ' '0UQJ0ZZ' 'B030YZZ' '4A0FX3Z' 'B246ZZZ' '30233N1' 'B030ZZZ'
+ '0YBG0ZZ' '5A1955Z']
+
+Procedimiento 7: 33 valores únicos
+  Primeros 10 valores: [nan 'GZB4ZZZ' 'B020ZZZ' '4A00X4Z' '8E01XY7' 'BR30YZZ' 'BW41ZZZ' '0QCF0ZZ'
+ '0B113F4' '4A02XM4']
+
+Procedimiento 8: 21 valores únicos
+  Primeros 10 valores: [nan 'GZB4ZZZ' 'F07L3ZZ' 'BR30ZZZ' 'B020ZZZ' '0HXLXZZ' '0W9B30Z' 'C22YYZZ'
+ 'GZB0ZZZ' 'GZ3ZZZZ']
+
+Procedimiento 9: 15 valores únicos
+  Valores: [nan 'GZB4ZZZ' '30233N1' 'B030ZZZ' '5A1D60Z' '4A00X4Z' 'GZ3ZZZZ' 'GZB0ZZZ'
+ 'GZ51ZZZ' 'B32RYZZ' '8E0ZXY6' '30243L1' 'B246ZZZ' '0UBC7ZX' 'BW03ZZZ'
+ 'BG44ZZZ']
+
+Procedimiento 10: 6 valores únicos
+  Valores: [nan 'GZB4ZZZ' '3E0336Z' 'F08Z6ZZ' 'GZB0ZZZ' '3E043NZ' 'BW38ZZZ']
+
+Procedimiento 11: 7 valores únicos
+  Valores: [nan 'GZB4ZZZ' 'B246ZZZ' '4A02X4Z' 'GZ72ZZZ' 'GZB0ZZZ' 'GZ14ZZZ' 'B345ZZZ']
+
+Procedimiento 12: 3 valores únicos
+  Valores: [nan 'GZB4ZZZ' 'GZB0ZZZ' 'GZ50ZZZ']
+
+Procedimiento 13: 2 valores únicos
+  Valores: [nan 'GZB4ZZZ' 'GZB0ZZZ']
+
+Procedimiento 14: 2 valores únicos
+  Valores: [nan 'GZB4ZZZ' 'GZB0ZZZ']
+
+Procedimiento 15: 2 valores únicos
+  Valores: [nan 'GZB4ZZZ' 'GZB0ZZZ']
+
+Procedimiento 16: 1 valores únicos
+  Valores: [nan 'GZB4ZZZ']
+
+Procedimiento 17: 1 valores únicos
+  Valores: [nan 'GZB4ZZZ']
+
+Procedimiento 18: 1 valores únicos
+  Valores: [nan 'GZB4ZZZ']
+
+Procedimiento 19: 1 valores únicos
+  Valores: [nan 'GZB4ZZZ']
+
+Procedimiento 20: 1 valores únicos
+  Valores: [nan 'GZB4ZZZ']
+
+GRD APR: 26 valores únicos
+  Primeros 10 valores: [750 756 752 775 754 751 753 773 758 776]
+
+CDM APR: 6 valores únicos
+  Valores: [19 20  1 24  0 15]
+
+Nivel Severidad APR: 4 valores únicos
+  Valores: [2 1 3 4]
+
+Riesgo Mortalidad APR: 4 valores únicos
+  Valores: [1 2 3 4]
+
+Servicio: 30 valores únicos
+  Primeros 10 valores: ['PSQ' 'CAR' 'MIR' 'NRL' 'PED' 'UTX' 'NRC' 'DIG' 'ONC' 'CCA']
+
+Edad: 94 valores únicos
+  Primeros 10 valores: [64 86 39 38 29 20 51 49 28 30]
+
+Coste APR: 213 valores únicos
+  Primeros 10 valores: [6340 2771 4009 6073 3867 3996 4422 3824 5988 5285]
+
+CIE: 1 valores únicos
+  Valores: [10]
+
+Número de registro anual: 21209 valores únicos
+  Primeros 10 valores: [8537155. 8992115. 8998349. 8800205. 8745063. 8985633. 8992471. 8525317.
+ 8666408. 8907021.]
+
+Centro Recodificado: 46 valores únicos
+  Primeros 10 valores: [-2088791444897189888 -1166333372325380096 '17490445801063320188'
+ -3960068041784730112 '407388993-1955827846' '11283154571870311269'
+ -2517781591 '1749593956-1956578751' '2054924644-748389819' -2940034890]
+
+CIP SNS Recodificado: 11874 valores únicos
+  Primeros 10 valores: ['109457269-593755146' -1589750168781380096 -5406560181117020160
+ -1823171082 -2828047377 -1085351946729890048 '761207796-2071749362'
+ '1833036024629461134' -1568575502649100032 '1197274748-946628087']
+
+País Nacimiento: 81 valores únicos
+  Primeros 10 valores: [724 'ZZZ' 276 504 466 '051' 192 642 826 170]
+
+País Residencia: 56 valores únicos
+  Primeros 10 valores: [724 '724.0' 642 686 100 276 250 170 612 380]
+
+Fecha de Inicio contacto: 20962 valores únicos
+  Primeros 10 valores: ['01012016 1622' '01012016 0453' '01012016 1301' '01012016 1446'
+ '01012016 1737' '01012016 1504' '01012016 0736' '01012016 1912'
+ '01012016 1300' '01012016 1648']
+
+Régimen Financiación: 7 valores únicos
+  Valores: [1. 6. 7. 2. 3. 9. 5.]
+
+Procedencia: 10 valores únicos
+  Valores: [21. 24. 27. 30. 80. 70. 23. 22. 25. 90.]
+
+Continuidad Asistencial: 7 valores únicos
+  Valores: [9. 1. 8. 5. 6. 3. 2.]
+
+Ingreso en UCI: 3 valores únicos
+  Valores: [2. 9. 1.]
+
+Días UCI: 16 valores únicos
+  Valores: [nan  1.  9.  3.  0. 35.  2.  4.  7.  6. 11.  5. 38. 15. 12.  8. 14.]
+
+Diagnóstico 15: 70 valores únicos
+  Primeros 10 valores: [nan 'N40.0' 'R45.851' 'F32.8' 'K57.30' 'E03.9' 'F10.10' 'Z79.4' 'D50.9'
+ 'L97.529']
+
+Diagnóstico 16: 56 valores únicos
+  Primeros 10 valores: [nan 'K57.30' 'R76.11' 'N40.0' 'K44.9' 'F17.210' 'E04.2' 'M06.9' 'I42.2'
+ 'Z88.2']
+
+Diagnóstico 17: 34 valores únicos
+  Primeros 10 valores: [nan 'Z99.81' 'H54.40' 'G47.33' 'Z88.8' 'M19.90' 'J47.9' 'J45.909'
+ 'T36.8X5A' 'Z79.891']
+
+Diagnóstico 18: 22 valores únicos
+  Primeros 10 valores: [nan 'E53.9' 'K80.20' 'Z79.82' 'E11.319' 'S29.9XXA' 'Z63.79' 'Z88.8'
+ 'F41.8' 'Z79.01']
+
+Diagnóstico 19: 16 valores únicos
+  Valores: [nan 'Z85.46' 'K76.1' 'J45.909' 'Z79.899' 'X58.XXXA' 'Z86.718' 'Z88.8'
+ 'Z81.1' 'Z87.891' 'J44.9' 'Z79.01' 'B18.2' 'Z91.19' 'M75.00' 'F17.210'
+ 'K29.70']
+
+Diagnóstico 20: 10 valores únicos
+  Valores: [nan 'Z87.891' 'N28.1' 'I25.10' 'Z99.89' 'Z91.041' 'F10.21' 'E46' 'E11.9'
+ 'Z60.8' 'K70.0']
+
+POA Diagnóstico Principal: 4 valores únicos
+  Valores: ['S' 'D' 'N' 'I']
+
+POA Diagnóstico 2: 4 valores únicos
+  Valores: ['E' 'S' nan 'D' 'N']
+
+POA Diagnóstico 3: 4 valores únicos
+  Valores: ['S' nan 'E' 'D' 'N']
+
+POA Diagnóstico 4: 6 valores únicos
+  Valores: [nan 'S' 'E' 'N' 'D' 'Z' 'I']
+
+POA Diagnóstico 5: 5 valores únicos
+  Valores: [nan 'S' 'E' 'N' 'D' 'Z']
+
+POA Diagnóstico 6: 5 valores únicos
+  Valores: [nan 'E' 'S' 'N' 'D' 'Z']
+
+POA Diagnóstico 7: 5 valores únicos
+  Valores: [nan 'E' 'S' 'N' 'D' 'I']
+
+POA Diagnóstico 8: 4 valores únicos
+  Valores: [nan 'E' 'S' 'N' 'D']
+
+POA Diagnóstico 9: 4 valores únicos
+  Valores: [nan 'S' 'E' 'N' 'D']
+
+POA Diagnóstico 10: 4 valores únicos
+  Valores: [nan 'E' 'S' 'N' 'D']
+
+POA Diagnóstico 11: 4 valores únicos
+  Valores: [nan 'S' 'E' 'N' 'D']
+
+POA Diagnóstico 12: 3 valores únicos
+  Valores: [nan 'E' 'S' 'N']
+
+POA Diagnóstico 13: 3 valores únicos
+  Valores: [nan 'E' 'S' 'N']
+
+POA Diagnóstico 14: 4 valores únicos
+  Valores: [nan 'E' 'S' 'N' 'D']
+
+POA Diagnóstico 15: 4 valores únicos
+  Valores: [nan 'S' 'E' 'N' 'D']
+
+POA Diagnóstico 16: 3 valores únicos
+  Valores: [nan 'S' 'E' 'N']
+
+POA Diagnóstico 17: 3 valores únicos
+  Valores: [nan 'E' 'S' 'N']
+
+POA Diagnóstico 18: 2 valores únicos
+  Valores: [nan 'S' 'E']
+
+POA Diagnóstico 19: 2 valores únicos
+  Valores: [nan 'E' 'S']
+
+POA Diagnóstico 20: 2 valores únicos
+  Valores: [nan 'E' 'S']
+
+Procedimiento Externo 1: 3 valores únicos
+  Valores: [nan '0UT94ZZ' 'B2111ZZ' '0FC44ZZ']
+
+Procedimiento Externo 2: 1 valores únicos
+  Valores: [nan '0UT24ZZ']
+
+Procedimiento Externo 3: 1 valores únicos
+  Valores: [nan '0UT74ZZ']
+
+Tipo GRD APR: 2 valores únicos
+  Valores: ['M' 'Q']
+
+Peso Español APR: 214 valores únicos
+  Primeros 10 valores: [1.393611 0.609264 0.881297 1.335036 0.850111 0.878454 0.972097 0.840646
+ 1.316269 1.161784]
+
+Edad en Ingreso: 94 valores únicos
+  Primeros 10 valores: [64 86 39 38 29 20 51 49 28 30]
+
+Mes de Ingreso: 36 valores únicos
+  Primeros 10 valores: ['2016-01' '2016-02' '2016-03' '2016-04' '2016-05' '2016-06' '2016-07'
+ '2016-08' '2016-09' '2016-10']
+
+8. ANÁLISIS DE VALORES ATÍPICOS
+--------------------------------------------------------------------------------
+🚨 Filas con valor inválido en 'Sexo': 25
+
+8.3. LIMPIEZA DE CÓDIGOS DE PAÍS NO NUMÉRICOS
+--------------------------------------------------------------------------------
+🚨 Códigos no numéricos en 'País Nacimiento': 4001
+🚨 Códigos no numéricos en 'País Residencia': 12
+📊 Total de filas a eliminar: 4007
+✅ Registros restantes: 17178
+
+================================================================================
+INGENIERÍA DE CARACTERÍSTICAS AVANZADA
+================================================================================
+
+1. CREACIÓN DE GRUPOS DE EDAD
+--------------------------------------------------------------------------------
+✅ Columna 'Grupo_Edad' creada
+
+Distribución por Grupo de Edad:
+  Adolescencia (13-17): 348 (2.03%)
+  Adultos (36-55): 8615 (50.15%)
+  Adultos jóvenes (18-35): 4825 (28.09%)
+  Adultos mayores (56-75): 2983 (17.37%)
+  Infancia (0-12): 166 (0.97%)
+  Tercera edad (>75): 241 (1.40%)
+
+2. CLASIFICACIÓN DE COMPLEJIDAD DEL CASO
+--------------------------------------------------------------------------------
+✅ Columnas 'Num_Diagnosticos' y 'Complejidad_Caso' creadas
+
+Estadísticas de diagnósticos por paciente:
+  Media: 4.34 diagnósticos
+  Mediana: 4 diagnósticos
+  Máximo: 20 diagnósticos
+
+Distribución por Complejidad del Caso:
+  Simple: 2026 (11.79%)
+  Moderada: 5711 (33.25%)
+  Compleja: 6278 (36.55%)
+  Muy compleja: 3163 (18.41%)
+
+3. CREACIÓN DE INDICADORES DE RIESGO
+--------------------------------------------------------------------------------
+✅ Indicador 'Riesgo_Alto' creado
+   Pacientes con riesgo alto: 555 (3.23%)
+
+✅ Indicador 'Estancia_Prolongada' creado (umbral: 32 días)
+   Pacientes con estancia prolongada: 1705 (9.93%)
+
+✅ Indicador 'Coste_Elevado' creado (umbral: 7078 €)
+   Pacientes con coste elevado: 1517 (8.83%)
+
+✅ Indicador 'Riesgo_Multiple' creado (0-3)
+
+Distribución de Riesgo Múltiple:
+  Nivel 0 (Sin riesgo): 14063 (81.87%)
+  Nivel 1 (Riesgo bajo): 2526 (14.70%)
+  Nivel 2 (Riesgo moderado): 516 (3.00%)
+  Nivel 3 (Riesgo alto): 73 (0.42%)
