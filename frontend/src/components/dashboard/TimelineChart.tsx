@@ -51,7 +51,7 @@ export function TimelineChart() {
   );
 
   return (
-    <Card className="py-4 sm:py-0">
+    <Card className="py-4 sm:py-0 flex flex-col h-full">
       <CardHeader className="flex flex-col items-stretch border-b !p-0 sm:flex-row">
         <div className="flex flex-1 flex-col justify-center gap-1 px-6 pb-3 sm:pb-0">
           <CardTitle>Evolución Temporal de Ingresos</CardTitle>
@@ -70,10 +70,10 @@ export function TimelineChart() {
           </div>
         </div>
       </CardHeader>
-      <CardContent className="px-2 sm:p-6">
+      <CardContent className="px-2 sm:px-6 sm:py-3 flex-1 flex items-center">
         <ChartContainer
           config={chartConfig}
-          className="aspect-auto h-[250px] w-full"
+          className="aspect-auto h-full w-full"
         >
           <LineChart
             accessibilityLayer

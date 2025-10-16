@@ -4,7 +4,7 @@
  * Cost analysis with charts and insights for mental health services
  */
 
-import { DollarSign, TrendingUp, Calendar, Users } from 'lucide-react';
+import { DollarSign, Calendar, Users } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Bar, BarChart, XAxis, YAxis, CartesianGrid, Line, LineChart } from 'recharts';
 import {
@@ -150,8 +150,8 @@ const AnalisisCostes = () => {
           <CardTitle>Evolución Mensual de Costes</CardTitle>
           <CardDescription>Distribución de costes por mes (Año 2024)</CardDescription>
         </CardHeader>
-        <CardContent>
-          <ChartContainer config={chartConfig} className="h-[300px]">
+        <CardContent className="px-2 sm:px-6">
+          <ChartContainer config={chartConfig} className="h-[300px] w-full">
             <LineChart
               data={evolucionCostes}
               margin={{
@@ -364,46 +364,6 @@ const AnalisisCostes = () => {
           </CardContent>
         </Card>
       </div>
-
-      {/* Insights */}
-      <Card>
-        <CardHeader>
-          <CardTitle>Análisis y Recomendaciones</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid gap-4 md:grid-cols-3">
-            <div className="p-4 rounded-lg bg-green-50 border border-green-200">
-              <div className="flex items-center gap-2 mb-2">
-                <TrendingUp className="h-5 w-5 text-green-600" />
-                <h4 className="font-semibold text-green-900">Punto Fuerte</h4>
-              </div>
-              <p className="text-sm text-green-800">
-                El Hospital A mantiene costes 23% por debajo del promedio manteniendo calidad de atención
-              </p>
-            </div>
-
-            <div className="p-4 rounded-lg bg-blue-50 border border-blue-200">
-              <div className="flex items-center gap-2 mb-2">
-                <DollarSign className="h-5 w-5 text-blue-600" />
-                <h4 className="font-semibold text-blue-900">Oportunidad</h4>
-              </div>
-              <p className="text-sm text-blue-800">
-                Casos de Severidad 3-4 representan solo 4% de casos pero 28% de costes totales
-              </p>
-            </div>
-
-            <div className="p-4 rounded-lg bg-orange-50 border border-orange-200">
-              <div className="flex items-center gap-2 mb-2">
-                <Users className="h-5 w-5 text-orange-600" />
-                <h4 className="font-semibold text-orange-900">Recomendación</h4>
-              </div>
-              <p className="text-sm text-orange-800">
-                Implementar protocolos del Hospital A en hospitales con mayor coste promedio
-              </p>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
     </div>
   );
 };

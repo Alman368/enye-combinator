@@ -56,12 +56,12 @@ const chartConfig = {
 export function TopDiagnosticsChart() {
   return (
     <Card>
-      <CardHeader>
+      <CardHeader className="pb-2">
         <CardTitle>Top 5 Diagnósticos</CardTitle>
         <CardDescription>Principales códigos CIE-10 (Año 2024)</CardDescription>
       </CardHeader>
-      <CardContent>
-        <ChartContainer config={chartConfig} className="h-[300px]">
+      <CardContent className="py-4">
+        <ChartContainer config={chartConfig} className="h-[200px]">
           <BarChart
             accessibilityLayer
             data={chartData}

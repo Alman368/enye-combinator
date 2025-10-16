@@ -30,7 +30,7 @@ import {
   SidebarHeader,
 } from '@/components/ui/sidebar';
 
-// Menu items for navigation - Ñ Combinator
+// Menu items for navigation - Combinator
 const menuItems = [
   {
     title: 'General',
@@ -57,8 +57,8 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarHeader className="border-b p-4">
         <div className="flex items-center gap-2">
-          <img src="/favicon.png" alt="Ñ Combinator" className="h-6 w-6" />
-          <span className="font-semibold text-sm">Ñ Combinator</span>
+          <img src="/favicon.png" alt="Combinator" className="h-6 w-6" />
+          <span className="font-semibold text-sm">Combinator</span>
         </div>
       </SidebarHeader>
 
