@@ -17,8 +17,17 @@ export function Header() {
       <Separator orientation="vertical" className="h-6" />
 
       <div className="flex flex-1 items-center justify-between">
-        <div>
-          <h1 className="text-lg font-semibold">MindHealth Analytics</h1>
+        <div className="flex items-center gap-2">
+          <img
+            src="/logo.png"
+            alt="Ñ Combinator"
+            className="h-8 w-8 object-contain"
+            onError={(e) => {
+              // Fallback if logo.png doesn't exist yet
+              e.currentTarget.style.display = 'none';
+            }}
+          />
+          <h1 className="text-lg font-semibold">Ñ Combinator</h1>
         </div>
 
         <div className="flex items-center gap-2">
