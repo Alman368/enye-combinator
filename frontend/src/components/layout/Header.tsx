@@ -11,6 +11,34 @@ export function Header() {
   return (
     <header className="flex h-16 shrink-0 items-center gap-2 px-4">
       <SidebarTrigger className="-ml-1" />
+<<<<<<< HEAD
+=======
+      <Separator orientation="vertical" className="h-6" />
+
+      <div className="flex flex-1 items-center justify-between">
+        <div className="flex items-center gap-2">
+          <img
+            src="/logo.png"
+            alt="Ñ Combinator"
+            className="h-8 w-8 object-contain"
+            onError={(e) => {
+              // Fallback if logo.png doesn't exist yet
+              e.currentTarget.style.display = 'none';
+            }}
+          />
+          <h1 className="text-lg font-semibold">Ñ Combinator</h1>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="icon">
+            <Bell className="h-5 w-5" />
+          </Button>
+          <Button variant="ghost" size="icon">
+            <User className="h-5 w-5" />
+          </Button>
+        </div>
+      </div>
+>>>>>>> bc346bf0c1af36aa48f7c7055967431454a1adb5
     </header>
   );
 }
